@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout Details - Riccardo Eyewear</title>
+
+    <!-- Bootstrap 5 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Montserrat:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- CSS Links -->
+    <link rel="stylesheet" href="checkout.css">
+</head>
+
+<body>
+
+    <!-- TOP LOGO HEADER (Thin top area full width) -->
+    <header class="checkout-header py-2 px-4 px-md-5 bg-white">
+        <div class="container-fluid p-0">
+            <a href="index.html" class="d-inline-block">
+                <img src="assets/website_logo.png" alt="Riccardo Eyewear" class="logo-img">
+            </a>
+        </div>
+    </header>
+
+    <!-- MAIN CHECKOUT 50/50 SPLIT CONTAINER -->
+    <main class="container-fluid p-0">
+        <form id="checkoutForm" novalidate>
+            <div class="row g-0 min-vh-100">
+
+                <!-- LEFT SECTION: 50% Width on Desktop (Checkout Form - White Background) -->
+                <div class="col-12 col-lg-6 checkout-left-section bg-white py-4 py-md-5  px-md-5 ">
+                    <div class="left-content-wrapper mx-auto ms-lg-auto " style="max-width: 540px;">
+
+                        <!-- 1. Contact -->
+                        <div class="mb-4">
+                            <h4 class="checkout-section-title mb-3">Contact</h4>
+                            <div class="field-box">
+                                <label for="billingEmail" class="field-label">Email Address</label>
+                                <input type="email" class="field-input" id="billingEmail"
+                                    placeholder="yourname@example.com" value="rohitd.bca2024@ssism.org" required>
+                                <div class="invalid-feedback">Please enter a valid email address.</div>
+                            </div>
+                        </div>
+
+                        <!-- 2. Billing Details -->
+                        <div class="mb-4">
+                            <h4 class="checkout-section-title mb-3">Billing Details</h4>
+
+                            <div class="row g-3">
+                                <!-- First Name & Last Name -->
+                                <div class="col-6">
+                                    <div class="field-box">
+                                        <label for="billingFirstName" class="field-label">First name</label>
+                                        <input type="text" class="field-input" id="billingFirstName"
+                                            placeholder="First name" value="roit" required>
+                                        <div class="invalid-feedback">First name required.</div>
+                                    </div>
+                                </div>
+
+                                <div class="col-6">
+                                    <div class="field-box">
+                                        <label for="billingLastName" class="field-label">Last name</label>
+                                        <input type="text" class="field-input" id="billingLastName"
+                                            placeholder="Last name" value="sd" required>
+                                        <div class="invalid-feedback">Last name required.</div>
+                                    </div>
+                                </div>
+
+                                <!-- Country / Region -->
+                                <div class="col-12">
+                                    <div class="field-box">
+                                        <label for="billingCountry" class="field-label">Country / Region</label>
+                                        <select class="field-select" id="billingCountry" required>
+                                            <option value="India" selected>India</option>
+                                            <option value="United States (US)">United States (US)</option>
+                                            <option value="United Kingdom (UK)">United Kingdom (UK)</option>
+                                            <option value="Canada">Canada</option>
+                                            <option value="Australia">Australia</option>
+                                        </select>
+                                    </div>
+                                </div>
+
+                                <!-- Street Address -->
+                                <div class="col-12">
+                                    <div class="field-box">
+                                        <label for="billingAddress" class="field-label">Street address</label>
+                                        <input type="text" class="field-input" id="billingAddress"
+                                            placeholder="House number and street name" value="qwes" required>
+                                        <div class="invalid-feedback">Street address required.</div>
+                                    </div>
+                                </div>
+
+                                <!-- Apartment, suite, unit, etc. (optional) -->
+                                <div class="col-12">
+                                    <div class="field-box">
+                                        <label for="billingApartment" class="field-label">Apartment, suite, unit, etc.
+                                            (optional)</label>
+                                        <input type="text" class="field-input" id="billingApartment"
+                                            placeholder="Apartment, suite, unit, etc. (optional)" value="sadfs">
+                                    </div>
+                                </div>
+
+                                <!-- Town / City, State Dropdown, PIN Code -->
+                                <div class="col-4">
+                                    <div class="field-box">
+                                        <label for="billingCity" class="field-label">Town / City</label>
+                                        <input type="text" class="field-input" id="billingCity"
+                                            placeholder="Town / City" value="dfghgfd" required>
+                                        <div class="invalid-feedback">City required.</div>
+                                    </div>
+                                </div>
+
+                                <div class="col-4">
+                                    <div class="field-box">
+                                        <label for="billingState" class="field-label">State</label>
+                                        <select class="field-select" id="billingState" required>
+                                            <option value="" disabled>Select State</option>
+                                            <option value="Andhra Pradesh">Andhra Pradesh</option>
+                                            <option value="Arunachal Pradesh">Arunachal Pradesh</option>
+                                            <option value="Assam">Assam</option>
+                                            <option value="Bihar">Bihar</option>
+                                            <option value="Chhattisgarh">Chhattisgarh</option>
+                                            <option value="Goa">Goa</option>
+                                            <option value="Gujarat">Gujarat</option>
+                                            <option value="Haryana">Haryana</option>
+                                            <option value="Himachal Pradesh">Himachal Pradesh</option>
+                                            <option value="Jharkhand">Jharkhand</option>
+                                            <option value="Karnataka">Karnataka</option>
+                                            <option value="Kerala">Kerala</option>
+                                            <option value="Madhya Pradesh" selected>Madhya Pradesh</option>
+                                            <option value="Maharashtra">Maharashtra</option>
+                                            <option value="Manipur">Manipur</option>
+                                            <option value="Meghalaya">Meghalaya</option>
+                                            <option value="Mizoram">Mizoram</option>
+                                            <option value="Nagaland">Nagaland</option>
+                                            <option value="Odisha">Odisha</option>
+                                            <option value="Punjab">Punjab</option>
+                                            <option value="Rajasthan">Rajasthan</option>
+                                            <option value="Sikkim">Sikkim</option>
+                                            <option value="Tamil Nadu">Tamil Nadu</option>
+                                            <option value="Telangana">Telangana</option>
+                                            <option value="Tripura">Tripura</option>
+                                            <option value="Uttar Pradesh">Uttar Pradesh</option>
+                                            <option value="Uttarakhand">Uttarakhand</option>
+                                            <option value="West Bengal">West Bengal</option>
+                                            <option value="Delhi">Delhi</option>
+                                        </select>
+                                        <div class="invalid-feedback">State required.</div>
+                                    </div>
+                                </div>
+
+                                <div class="col-4">
+                                    <div class="field-box">
+                                        <label for="billingZip" class="field-label">PIN Code</label>
+                                        <input type="text" class="field-input" id="billingZip" placeholder="PIN Code"
+                                            value="234567" required>
+                                        <div class="invalid-feedback">PIN code required.</div>
+                                    </div>
+                                </div>
+
+                                <!-- Phone -->
+                                <div class="col-12">
+                                    <div class="field-box">
+                                        <label for="billingPhone" class="field-label">Phone</label>
+                                        <input type="tel" class="field-input" id="billingPhone" placeholder="Phone"
+                                            value="1234567890" required>
+                                        <div class="invalid-feedback">Phone required.</div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+
+                        <!-- 3. Additional Information -->
+                        <div class="mb-4">
+                            <h4 class="checkout-section-title mb-3">Additional Information</h4>
+                            <div>
+                                <textarea class="field-textarea" id="orderNotes" rows="3"
+                                    placeholder="Notes about your order, e.g. special notes for delivery."></textarea>
+                            </div>
+                        </div>
+
+                        <!-- 4. Payment -->
+                        <div class="mb-4">
+                            <h4 class="checkout-section-title mb-3">Payment</h4>
+
+                            <div class="payment-card-wrapper">
+                                <!-- Option 1: Direct Bank Transfer -->
+                                <div class="payment-row border-bottom">
+                                    <div class="form-check m-0">
+                                        <input class="form-check-input" type="radio" name="paymentMethod"
+                                            id="paymentBank" value="bank" data-desc-id="descBank">
+                                        <label class="form-check-label text-dark ms-2" for="paymentBank"
+                                            style="cursor:pointer; font-size: 14px;">
+                                            Direct bank transfer
+                                        </label>
+                                    </div>
+                                    <div class="payment-desc-content d-none" id="descBank">
+                                        Make your payment directly into our bank account. Please use your Order ID as
+                                        the payment reference.
+                                    </div>
+                                </div>
+
+                                <!-- Option 2: Cash on Delivery (Selected) -->
+                                <div class="payment-row selected">
+                                    <div class="form-check m-0">
+                                        <input class="form-check-input" type="radio" name="paymentMethod"
+                                            id="paymentCod" value="cod" data-desc-id="descCod" checked>
+                                        <label class="form-check-label text-dark fw-bold ms-2" for="paymentCod"
+                                            style="cursor:pointer; font-size: 14px;">
+                                            Cash on delivery
+                                        </label>
+                                    </div>
+                                    <div class="payment-desc-content" id="descCod">
+                                        Pay with cash upon delivery.
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- 5. Bottom Full-Width Black Place Order Button -->
+                        <div class="mt-4">
+                            <button type="submit"
+                                class="btn-place-order-black d-flex align-items-center justify-content-center gap-2">
+                                <i class="bi bi-lock-fill"></i>
+                                <span>Place Order</span>
+                                <span id="btnOrderTotal">$117.00</span>
+                            </button>
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- RIGHT SECTION: 50% Width on Desktop (Light Grey Order Summary Panel) -->
+                <div class="col-12 col-lg-6 checkout-right-section py-4 py-md-5  px-md-5">
+                    <div class="right-content-wrapper mx-auto me-lg-auto ms-lg-4" style="max-width: 460px;">
+
+                        <!-- Dynamic Cart Items List -->
+                        <div id="checkoutSummaryItems" class="mb-4">
+                            <!-- Populated dynamically by checkout.js -->
+                        </div>
+
+                        <!-- Coupon Code Section -->
+                        <div class="mb-4">
+                            <div class="input-group">
+                                <input type="text" id="couponInput" class="form-control coupon-input-field shadow-none"
+                                    placeholder="Coupon Code">
+                                <button type="button" class="btn btn-apply-coupon" id="applyCouponBtn">Apply</button>
+                            </div>
+                            <div id="couponMessage"></div>
+                        </div>
+
+                        <!-- Subtotal Row -->
+                        <div class="d-flex justify-content-between align-items-center py-3 border-top summary-row">
+                            <span>Subtotal</span>
+                            <span id="checkoutSubtotal">$117.00</span>
+                        </div>
+
+                        <!-- Total Row -->
+                        <div class="d-flex justify-content-between align-items-center py-3 border-top total-row">
+                            <span class="total-label-text">Total</span>
+                            <span class="total-amount-text" id="checkoutTotal">$117.00</span>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+        </form>
+    </main>
+
+    <!-- JavaScript Files -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="checkout.js"></script>
+
+</body>
+
+</html>

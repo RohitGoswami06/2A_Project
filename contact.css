@@ -1,0 +1,253 @@
+/* ==========================================================================
+   Eyewear Store - Contact Us Page Styles
+   ========================================================================== */
+
+body {
+    font-family: 'DM Sans', sans-serif;
+    color: #111;
+    background-color: #fff;
+    overflow-x: hidden;
+}
+
+/* Header Banner for Contact Page */
+header#main_div {
+    min-height: 440px;
+    background-image: url(assets/bg-05.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+header#main_div h1 {
+    font-family: "Yeseva One", "DM Serif Display", serif;
+    font-size: 98px;
+    margin-bottom: 50px;
+}
+
+.contact-section {
+    padding: 90px 0 100px 0;
+    background-color: #ffffff;
+}
+
+.contact-subheading {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 13px;
+    letter-spacing: 0.5px;
+}
+
+.contact-heading {
+    font-family: 'Yeseva One', 'DM Serif Display', serif;
+    font-size: 56px;
+    line-height: 1.15;
+    letter-spacing: -0.5px;
+}
+
+.contact-intro {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 15px;
+    line-height: 1.8;
+    color: #666666;
+    max-width: 580px;
+}
+
+/* Form Styles */
+.contact-form-card {
+    background-color: #ffffff;
+    border: 1px solid #e5e5e5;
+    padding: 40px;
+}
+
+.contact-form-card .form-label {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 10px;
+    font-weight: 700;
+    color: #111;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-bottom: 8px;
+}
+
+.contact-form-card .form-control {
+    border-radius: 0;
+    border: 1px solid #e0e0e0;
+    padding: 12px 16px;
+    font-size: 14px;
+    color: #333;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.contact-form-card .form-control:focus {
+    border-color: #000;
+    box-shadow: none;
+    outline: none;
+}
+
+.contact-submit-btn {
+    background-color: #000;
+    color: #fff;
+    border: 1px solid #000;
+    border-radius: 0;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    padding: 14px 36px;
+    transition: all 0.3s ease;
+}
+
+.contact-submit-btn:hover {
+    background-color: #333;
+    border-color: #333;
+    color: #fff;
+}
+
+/* Info Box Styles */
+.contact-info-card {
+    background-color: #fafafa;
+    border: 1px solid #e5e5e5;
+    padding: 40px;
+    height: 100%;
+}
+
+.contact-info-title {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 20px;
+    font-weight: 700;
+    color: #000;
+    margin-bottom: 30px;
+}
+
+.contact-info-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 18px;
+    margin-bottom: 28px;
+}
+
+.contact-info-icon {
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    background-color: #000;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+    flex-shrink: 0;
+}
+
+.contact-info-label {
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    color: #888;
+    margin-bottom: 4px;
+}
+
+.contact-info-val {
+    font-size: 15px;
+    color: #111;
+    font-weight: 500;
+    line-height: 1.5;
+}
+
+.contact-info-val a {
+    color: #111;
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+.contact-info-val a:hover {
+    color: #555;
+}
+
+/* Responsive Styles */
+@media (max-width: 991.98px) {
+    header#main_div h1 {
+        font-size: 60px;
+    }
+
+    .contact-section {
+        padding: 60px 0;
+    }
+
+    .contact-heading {
+        font-size: 42px;
+    }
+
+    .contact-form-card,
+    .contact-info-card {
+        padding: 30px 24px;
+    }
+}
+
+@media (max-width: 767.98px) {
+    header#main_div h1 {
+        font-size: 40px;
+    }
+
+    .contact-section {
+        padding: 40px 0;
+    }
+
+    .contact-heading {
+        font-size: 32px;
+    }
+
+    .contact-form-card,
+    .contact-info-card {
+        padding: 24px 18px;
+    }
+}
+
+.contact-section {
+    padding-top: 100px !important;
+    padding-bottom: 100px !important;
+}
+
+.contact-title {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 38px;
+}
+
+.contact-description {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 17px;
+    line-height: 1.8;
+    max-width: 680px;
+}
+
+.contact-form-box {
+    background: #fff;
+    padding: 60px 65px;
+
+    box-shadow: 0 30px 50px rgba(0, 0, 0, 0.12);
+}
+
+.contact-form-box .form-label {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 15px;
+    color: #555;
+}
+
+.contact-form-box .form-label span {
+    color: red;
+}
+
+.contact-form-box .form-control {
+    height: 50px;
+    border-radius: 8px;
+}
+
+.contact-form-box textarea.form-control {
+    height: 110px;
+}
+
+@media (max-width: 991px) {
+    .contact-form-box {
+        margin-left: 0;
+        margin-top: 50px;
+    }
+}

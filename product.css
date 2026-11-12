@@ -1,0 +1,253 @@
+/* =========================
+PRODUCT IMAGE
+========================= */
+
+.product-image {
+    aspect-ratio: 1 / 1;
+    overflow: hidden;
+    background: #f6f6f6;
+}
+
+.product-image img {
+    transition: opacity 0.3s ease;
+}
+
+.product-image .hover-image {
+    opacity: 0;
+}
+
+.product-card:hover .normal-image {
+    opacity: 0;
+}
+
+.product-card:hover .hover-image {
+    opacity: 1;
+}
+
+
+/* =========================
+RIPPLE EFFECT
+========================= */
+
+.ripple {
+    position: absolute;
+    border-radius: 50%;
+    width: 35px;
+    height: 35px;
+    background: rgba(0, 0, 0, 0.18);
+    animation: ripple 1s ease-out;
+    pointer-events: none;
+    top: 0;
+    left: 0;
+}
+
+@keyframes ripple {
+    0% {
+        transform: scale(0);
+        opacity: 0.6;
+    }
+
+    50% {
+        transform: scale(1);
+        opacity: 0.4;
+    }
+
+    100% {
+        transform: scale(1.8);
+        opacity: 0;
+    }
+}
+
+
+/* =========================
+PRODUCT ACTION BUTTONS
+========================= */
+
+.product-actions {
+    opacity: 0;
+    transform: translateX(10px);
+    transition: all 0.3s ease;
+}
+
+.product-card:hover .product-actions {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.product-action {
+    width: 42px;
+    height: 42px;
+}
+
+/* Touch devices */
+@media (hover: none) {
+    .product-actions {
+        opacity: 1;
+        transform: none;
+    }
+}
+
+
+/* =========================
+PRODUCT TEXT
+========================= */
+
+.product-name {
+    font-size: 30px;
+    font-family: 'DM Serif Display', 'Yeseva One', serif;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    margin-top: 16px;
+    margin-left: 4px;
+}
+
+@media (max-width: 991px) { .product-name { font-size: 22px; } }
+@media (max-width: 575px) { .product-name { font-size: 18px; } }
+
+.product-card-price {
+    font-size: 14px;
+    color: #555;
+    margin-top: 4px;
+    margin-left: 4px;
+}
+
+.product-card-price .price-old {
+    text-decoration: line-through;
+    color: #999;
+    margin-right: 6px;
+}
+
+.product-card-price .price-sale {
+    font-weight: 700;
+    color: #000;
+}
+
+
+/* =========================
+PRODUCT MODAL
+========================= */
+
+.product-modal .modal-dialog {
+    max-width: 930px;
+}
+
+.product-modal .modal-content {
+    border: 0;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.product-modal .modal-body {
+    padding: 0;
+}
+
+
+/* =========================
+MODAL PRODUCT IMAGE
+========================= */
+
+.modal-product-image {
+    height: 100%;
+    min-height: 430px;
+    background: #f6f6f6;
+}
+
+
+/* =========================
+MODAL DETAILS
+========================= */
+
+.modal-product-details {
+    padding: 28px 28px 0 28px;
+    height: 400px;
+    overflow-y: auto;
+}
+
+.modal-category-top {
+    font-family: "DM Sans", sans-serif;
+    font-size: 15px;
+    letter-spacing: 1px;
+    color: #888;
+    margin-bottom: 8px;
+}
+
+.modal-product-title {
+    font-family: "Yeseva One", serif;
+    font-size: 28px;
+    line-height: 1.2;
+    color: #000;
+    margin-bottom: 14px;
+}
+
+.modal-price-shipping {
+    font-family: "DM Sans", sans-serif;
+    font-size: 17px;
+    line-height: 1.4;
+    margin-bottom: 14px;
+}
+
+.modal-price {
+    font-size: 26px;
+    font-weight: 700;
+    color: #000;
+}
+
+.modal-shipping {
+    font-size: 16px;
+    font-weight: 400;
+    color: #666;
+}
+
+.modal-description {
+    font-family: "DM Sans", sans-serif;
+    font-size: 17px;
+    line-height: 1.7;
+    color: #666;
+}
+
+.modal-description p {
+    margin-bottom: 30px;
+}
+
+.modal-description p:last-child {
+    margin-bottom: 12px;
+}
+
+.modal-category-bottom {
+    border-top: 1px solid #ddd;
+    padding-top: 12px;
+    font-family: "DM Sans", sans-serif;
+    font-size: 13px;
+    color: #666;
+}
+
+.modal-category-bottom strong {
+    color: #666;
+    font-weight: 400;
+}
+
+.modal-category-bottom span {
+    color: #222;
+}
+
+
+/* =========================
+MOBILE
+========================= */
+
+@media (max-width: 767.98px) {
+
+    .modal-product-image {
+        min-height: 260px;
+        height: 260px;
+    }
+
+    .modal-product-details {
+        padding: 20px 18px;
+        height: 300px;
+    }
+
+    .modal-product-title {
+        font-size: 22px;
+    }
+}

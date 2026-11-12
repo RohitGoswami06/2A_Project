@@ -1,0 +1,272 @@
+.thumb-col {
+    width: 130px;
+    flex-shrink: 0;
+}
+
+@media (max-width: 767px) {
+    .thumb-col {
+        width: 60px;
+    }
+
+    .extra-Product {
+        font-size: 32px;
+    }
+}
+
+@media (max-width: 575px) {
+    .thumb-col {
+        width: 50px;
+    }
+
+    .extra-Product {
+        font-size: 26px;
+    }
+
+    .detail-title {
+        font-size: 22px;
+    }
+
+    .detail-price {
+        font-size: 20px;
+    }
+
+    .detail-desc {
+        font-size: 15px;
+    }
+}
+
+.thumb-item {
+    width: 100%;
+    aspect-ratio: 1/1;
+    cursor: pointer;
+    border: 2px solid transparent;
+    overflow: hidden;
+    transition: border-color 0.2s;
+}
+
+.thumb-item.active,
+.thumb-item:hover {
+    border-color: #000;
+}
+
+.thumb-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.main-img-wrap {
+    position: relative;
+    background: #f6f6f6;
+    overflow: hidden;
+    height: 100%;
+}
+
+.main-img-wrap img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.zoom-btn {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    width: 36px;
+    height: 36px;
+    background: rgba(255, 255, 255, 0.85);
+    border: 1px solid #ddd;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    z-index: 2;
+}
+
+.detail-category {
+    font-size: 16px;
+    letter-spacing: 2px;
+    color: #888;
+    text-transform: uppercase;
+}
+
+.detail-title {
+    font-family: "Yeseva One", serif;
+    font-size: 32px;
+    font-weight: bold;
+    line-height: 1.2;
+}
+
+.detail-price {
+    font-size: 26px;
+    font-weight: bold;
+}
+
+.detail-desc {
+    font-size: 18px;
+    line-height: 1.8;
+    color: #555;
+}
+
+.qty-btn {
+    width: 36px;
+    height: 36px;
+    border: 1px solid #ccc;
+    background: #fff;
+    font-size: 18px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.qty-display {
+    width: 44px;
+    height: 36px;
+    border-top: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+}
+
+.sticky-bar {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: #fff;
+    border-top: 1px solid #e0e0e0;
+    z-index: 1040;
+    padding: 10px 20px;
+}
+
+.sticky-bar img {
+    width: 48px;
+    height: 48px;
+    object-fit: cover;
+}
+
+.product-image {
+    aspect-ratio: 1/1;
+    overflow: hidden;
+    background: #f6f6f6;
+}
+
+.product-image img {
+    transition: opacity 0.3s ease;
+}
+
+.product-image .hover-image {
+    opacity: 0;
+}
+
+.product-card:hover .normal-image {
+    opacity: 0;
+}
+
+.product-card:hover .hover-image {
+    opacity: 1;
+}
+
+.product-actions {
+    opacity: 0;
+    transform: translateX(10px);
+    transition: all 0.3s ease;
+}
+
+.product-card:hover .product-actions {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.product-action {
+    width: 42px;
+    height: 42px;
+}
+
+@media (hover: none) {
+    .product-actions {
+        opacity: 1;
+        transform: none;
+    }
+}
+
+
+
+.cart-panel {
+    position: fixed;
+    top: 0;
+    right: -420px;
+    width: 380px;
+    height: 100vh;
+    z-index: 9999;
+    box-shadow: -4px 0 20px rgba(0, 0, 0, 0.15);
+    transition: right 0.3s ease;
+    font-family: "Montserrat", sans-serif;
+}
+
+.cart-panel.open {
+    right: 0;
+}
+
+.cart-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.3);
+    z-index: 9998;
+    display: none;
+}
+
+.cart-overlay.open {
+    display: block;
+}
+
+.cart-qty button {
+    width: 28px;
+    height: 28px;
+    border: 1px solid #ccc;
+    background: #fff;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.cart-qty span {
+    width: 36px;
+    height: 28px;
+    border-top: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+    font-size: 13px;
+}
+
+.cart-btn:hover {
+    background: #000 !important;
+    color: #fff !important;
+}
+
+.cart-count {
+    position: absolute;
+    top: -6px;
+    right: -8px;
+    width: 16px;
+    height: 16px;
+    font-size: 10px;
+}
+
+.extra-Product {
+    font-family: "Yeseva One", serif;
+    font-size: 55px;
+
+}
+
+@media (max-width: 575px) {
+    .detail-title {
+        font-size: 22px;
+    }
+
+    .sticky-bar .bar-name {
+        display: none;
+    }
+}

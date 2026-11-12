@@ -1,0 +1,226 @@
+[
+    {
+        "id": 1,
+        "name": "Product Name 1",
+        "price": 150.00,
+        "oldPrice": 175.00,
+        "discount": "-14%",
+        "category": "Women",
+        "imageA": "assets/product-01-a-600x600.jpg",
+        "imageB": "assets/product-01-b-600x600.jpg",
+        "images": [
+            "assets/product-01-a-600x600.jpg",
+            "assets/product-01-b-600x600.jpg",
+            "assets/product-01-c.jpg",
+            "assets/product-e-600x600.jpg"
+        ],
+        "description": [
+            "Ut non elit lorem. Duis pharetra odio vitae nisl luctus, at volutpat arcu lacinia. Aliquam id ullamcorper augue. Fusce feugiat nibh et nisl mollis hendrerit. Mauris sit amet nulla in augue laoreet lobortis ac eleifend nunc. Quisque eleifend sollicitudin nulla, et consequat eros. Donec pellentesque dapibus massa ut cursus.",
+            "Quisque ut augue eu dui semper eleifend. Aliquam imperdiet nisl libero, vitae vulputate lectus fringilla eget."
+        ]
+    },
+    {
+        "id": 2,
+        "name": "Product Name 2",
+        "price": 110.00,
+        "oldPrice": 135.00,
+        "discount": "18%",
+        "category": "Women",
+        "imageA": "assets/product-02-a-600x600.jpg",
+        "imageB": "assets/product-02-b-600x600.jpg",
+        "images": [
+            "assets/product-02-a-600x600.jpg",
+            "assets/product-02-b-600x600.jpg",
+            "assets/product-02-c.jpg",
+            "assets/product-e-600x600.jpg"
+        ],
+        "description": [
+            "Ut non elit lorem. Duis pharetra odio vitae nisl luctus, at volutpat arcu lacinia. Aliquam id ullamcorper augue. Fusce feugiat nibh et nisl mollis hendrerit. Mauris sit amet nulla in augue laoreet lobortis ac eleifend nunc. Quisque eleifend sollicitudin nulla, et consequat eros. Donec pellentesque dapibus massa ut cursus.",
+            "Quisque ut augue eu dui semper eleifend. Aliquam imperdiet nisl libero, vitae vulputate lectus fringilla eget."
+        ]
+    },
+    {
+        "id": 3,
+        "name": "Product Name 3",
+        "price": 95.00,
+        "category": "Women",
+        "imageA": "assets/product-03-a-600x600.jpg",
+        "imageB": "assets/product-03-b.jpg",
+        "images": [
+            "assets/product-03-a-600x600.jpg",
+            "assets/product-03-b.jpg",
+            "assets/product-03-c.jpg",
+            "assets/product-e-600x600.jpg"
+        ],
+        "description": [
+            "Ut non elit lorem. Duis pharetra odio vitae nisl luctus, at volutpat arcu lacinia. Aliquam id ullamcorper augue. Fusce feugiat nibh et nisl mollis hendrerit. Mauris sit amet nulla in augue laoreet lobortis ac eleifend nunc. Quisque eleifend sollicitudin nulla, et consequat eros. Donec pellentesque dapibus massa ut cursus.",
+            "Quisque ut augue eu dui semper eleifend. Aliquam imperdiet nisl libero, vitae vulputate lectus fringilla eget."
+        ]
+    },
+    {
+        "id": 4,
+        "name": "Product Name 4",
+        "price": 99.00,
+        "oldPrice": 120.00,
+        "discount": "-18%",
+        "category": "Women",
+        "imageA": "assets/product-04-a-600x600.jpg",
+        "imageB": "assets/product-04-b.jpg",
+        "images": [
+            "assets/product-04-a-600x600.jpg",
+            "assets/product-04-b.jpg",
+            "assets/product-04-c.jpg",
+            "assets/product-e-600x600.jpg"
+        ],
+        "description": [
+            "Ut non elit lorem. Duis pharetra odio vitae nisl luctus, at volutpat arcu lacinia. Aliquam id ullamcorper augue. Fusce feugiat nibh et nisl mollis hendrerit. Mauris sit amet nulla in augue laoreet lobortis ac eleifend nunc. Quisque eleifend sollicitudin nulla, et consequat eros. Donec pellentesque dapibus massa ut cursus.",
+            "Quisque ut augue eu dui semper eleifend. Aliquam imperdiet nisl libero, vitae vulputate lectus fringilla eget."
+        ]
+    },
+    {
+        "id": 5,
+        "name": "Product Name 5",
+        "price": 120.00,
+        "oldPrice": 135.00,
+        "discount": "-11%",
+        "category": "Women",
+        "imageA": "assets/product-05-a.jpg",
+        "imageB": "assets/product-05-b.jpg",
+        "images": [
+            "assets/product-05-a.jpg",
+            "assets/product-05-b.jpg",
+            "assets/product-05-c.jpg",
+            "assets/product-e-600x600.jpg"
+        ],
+        "description": [
+            "Ut non elit lorem. Duis pharetra odio vitae nisl luctus, at volutpat arcu lacinia. Aliquam id ullamcorper augue. Fusce feugiat nibh et nisl mollis hendrerit. Mauris sit amet nulla in augue laoreet lobortis ac eleifend nunc. Quisque eleifend sollicitudin nulla, et consequat eros. Donec pellentesque dapibus massa ut cursus.",
+            "Quisque ut augue eu dui semper eleifend. Aliquam imperdiet nisl libero, vitae vulputate lectus fringilla eget."
+        ]
+    },
+    {
+        "id": 6,
+        "name": "Product Name 6",
+        "price": 230.00,
+        "category": "Women",
+        "imageA": "assets/product-06-a.jpg",
+        "imageB": "assets/product-06-b.jpg",
+        "images": [
+            "assets/product-06-a.jpg",
+            "assets/product-06-b.jpg",
+            "assets/product-06-c.jpg",
+            "assets/product-e-600x600.jpg"
+        ],
+        "description": [
+            "Ut non elit lorem. Duis pharetra odio vitae nisl luctus, at volutpat arcu lacinia. Aliquam id ullamcorper augue. Fusce feugiat nibh et nisl mollis hendrerit. Mauris sit amet nulla in augue laoreet lobortis ac eleifend nunc. Quisque eleifend sollicitudin nulla, et consequat eros. Donec pellentesque dapibus massa ut cursus.",
+            "Quisque ut augue eu dui semper eleifend. Aliquam imperdiet nisl libero, vitae vulputate lectus fringilla eget."
+        ]
+    },
+    {
+        "id": 7,
+        "name": "Product Name 7",
+        "price": 150.00,
+        "category": "Women",
+        "imageA": "assets/product-07-a.jpg",
+        "imageB": "assets/product-07-b.jpg",
+        "images": [
+            "assets/product-07-a.jpg",
+            "assets/product-07-b.jpg",
+            "assets/product-07-c.jpg",
+            "assets/product-e-600x600.jpg"
+        ],
+        "description": [
+            "Ut non elit lorem. Duis pharetra odio vitae nisl luctus, at volutpat arcu lacinia. Aliquam id ullamcorper augue. Fusce feugiat nibh et nisl mollis hendrerit. Mauris sit amet nulla in augue laoreet lobortis ac eleifend nunc. Quisque eleifend sollicitudin nulla, et consequat eros. Donec pellentesque dapibus massa ut cursus.",
+            "Quisque ut augue eu dui semper eleifend. Aliquam imperdiet nisl libero, vitae vulputate lectus fringilla eget."
+        ]
+    },
+    {
+        "id": 8,
+        "name": "Product Name 8",
+        "price": 145.00,
+        "category": "Women",
+        "imageA": "assets/product-08-a.jpg",
+        "imageB": "assets/product-08-b.jpg",
+        "images": [
+            "assets/product-08-a.jpg",
+            "assets/product-08-b.jpg",
+            "assets/product-08-c.jpg",
+            "assets/product-e-600x600.jpg"
+        ],
+        "description": [
+            "Ut non elit lorem. Duis pharetra odio vitae nisl luctus, at volutpat arcu lacinia. Aliquam id ullamcorper augue. Fusce feugiat nibh et nisl mollis hendrerit. Mauris sit amet nulla in augue laoreet lobortis ac eleifend nunc. Quisque eleifend sollicitudin nulla, et consequat eros. Donec pellentesque dapibus massa ut cursus.",
+            "Quisque ut augue eu dui semper eleifend. Aliquam imperdiet nisl libero, vitae vulputate lectus fringilla eget."
+        ]
+    },
+    {
+        "id": 9,
+        "name": "Product Name 9",
+        "price": 135.00,
+        "category": "Men",
+        "imageA": "assets/product-09-a.jpg",
+        "imageB": "assets/product-09-b.jpg",
+        "images": [
+            "assets/product-09-a.jpg",
+            "assets/product-09-b.jpg",
+            "assets/product-09-c.jpg",
+            "assets/product-d.jpg"
+        ],
+        "description": [
+            "Ut non elit lorem. Duis pharetra odio vitae nisl luctus, at volutpat arcu lacinia. Aliquam id ullamcorper augue. Fusce feugiat nibh et nisl mollis hendrerit. Mauris sit amet nulla in augue laoreet lobortis ac eleifend nunc. Quisque eleifend sollicitudin nulla, et consequat eros. Donec pellentesque dapibus massa ut cursus.",
+            "Quisque ut augue eu dui semper eleifend. Aliquam imperdiet nisl libero, vitae vulputate lectus fringilla eget."
+        ]
+    },
+    {
+        "id": 10,
+        "name": "Product Name 10",
+        "price": 117.00,
+        "category": "Men",
+        "imageA": "assets/product-10-a.jpg",
+        "imageB": "assets/product-10-b.jpg",
+        "images": [
+            "assets/product-10-a.jpg",
+            "assets/product-10-b.jpg",
+            "assets/product-10-c.jpg",
+            "assets/product-d.jpg"
+        ],
+        "description": [
+            "Ut non elit lorem. Duis pharetra odio vitae nisl luctus, at volutpat arcu lacinia. Aliquam id ullamcorper augue. Fusce feugiat nibh et nisl mollis hendrerit. Mauris sit amet nulla in augue laoreet lobortis ac eleifend nunc. Quisque eleifend sollicitudin nulla, et consequat eros. Donec pellentesque dapibus massa ut cursus.",
+            "Quisque ut augue eu dui semper eleifend. Aliquam imperdiet nisl libero, vitae vulputate lectus fringilla eget."
+        ]
+    },
+    {
+        "id": 11,
+        "name": "Product Name 11",
+        "price": 185.00,
+        "category": "Men",
+        "imageA": "assets/product-11-a.jpg",
+        "imageB": "assets/product-11-b-600x600.jpg",
+        "images": [
+            "assets/product-11-a.jpg",
+            "assets/product-11-b-600x600.jpg",
+            "assets/product-11-c.jpg",
+            "assets/product-d.jpg"
+        ],
+        "description": [
+            "Ut non elit lorem. Duis pharetra odio vitae nisl luctus, at volutpat arcu lacinia. Aliquam id ullamcorper augue. Fusce feugiat nibh et nisl mollis hendrerit. Mauris sit amet nulla in augue laoreet lobortis ac eleifend nunc. Quisque eleifend sollicitudin nulla, et consequat eros. Donec pellentesque dapibus massa ut cursus.",
+            "Quisque ut augue eu dui semper eleifend. Aliquam imperdiet nisl libero, vitae vulputate lectus fringilla eget."
+        ]
+    },
+    {
+        "id": 12,
+        "name": "Product Name 12",
+        "price": 150.00,
+        "category": "Men",
+        "imageA": "assets/product-12-a.jpg",
+        "imageB": "assets/product-12-b.jpg",
+        "images": [
+            "assets/product-12-a.jpg",
+            "assets/product-12-b.jpg",
+            "assets/product-12-c.jpg",
+            "assets/product-d.jpg"
+        ],
+        "description": [
+            "Ut non elit lorem. Duis pharetra odio vitae nisl luctus, at volutpat arcu lacinia. Aliquam id ullamcorper augue. Fusce feugiat nibh et nisl mollis hendrerit. Mauris sit amet nulla in augue laoreet lobortis ac eleifend nunc. Quisque eleifend sollicitudin nulla, et consequat eros. Donec pellentesque dapibus massa ut cursus.",
+            "Quisque ut augue eu dui semper eleifend. Aliquam imperdiet nisl libero, vitae vulputate lectus fringilla eget."
+        ]
+    }
+]

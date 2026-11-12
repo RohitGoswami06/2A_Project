@@ -1,0 +1,639 @@
+/* ================= UNIVERSAL RESET ================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    overflow-x: hidden;
+}
+
+/* ================= HEADER ================= */
+
+header {
+    height: auto;
+    background-image: url(assets/firstpage_bg.png);
+    background-size: contain;
+}
+
+
+/* ================= NAVBAR ================= */
+
+.navbar {
+    min-height: 180px;
+    position: relative;
+}
+
+
+/* Main Row */
+
+.navbar>.row {
+    align-items: flex-start;
+}
+
+
+/* ================= LEFT PART ================= */
+
+#colum1>.row {
+    margin-left: 40px;
+
+    display: flex;
+    align-items: center;
+
+    flex-wrap: wrap;
+    gap: 0;
+}
+
+
+/* Left links */
+
+#colum1 .nav-link {
+    width: auto;
+    flex: 0 0 auto;
+
+    margin-right: 45px;
+
+    color: #555;
+    text-decoration: none;
+
+    font-size: 20px;
+    font-weight: 600;
+}
+
+
+/* Home */
+
+#colum1 .nav-link:first-child {
+    color: black;
+}
+
+
+/* Contact ko next line mein */
+
+#colum1 .nav-link:last-child {
+    margin-top: 60px;
+}
+
+
+/* ================= CENTER LOGO ================= */
+
+.logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.logo img {
+    width: 150px;
+    height: auto;
+    display: block;
+}
+
+
+/* ================= RIGHT PART ================= */
+
+#colum3>.row {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+
+/* Right columns */
+
+#colum3 .col {
+    flex: 0 0 auto;
+    width: auto;
+
+    margin-left: 35px;
+}
+
+
+/* Search & Basket */
+
+#colum3 i {
+    font-size: 20px;
+    color: black;
+}
+
+
+/* Price */
+
+#colum3 strong {
+    font-size: 20px;
+    color: black;
+}
+
+
+/* Login */
+
+#colum3 a {
+    color: black;
+    text-decoration: none;
+    font-size: 21px;
+}
+
+
+/* ================= MOBILE ================= */
+
+@media (max-width: 767px) {
+
+    .navbar {
+        min-height: auto;
+    }
+
+    .navbar>.row {
+        min-height: auto;
+    }
+
+    .col-md-4,
+    .col-md-3,
+    .col-md-5 {
+        width: 100%;
+        text-align: center;
+    }
+
+    .col-md-4 .nav-link {
+        margin-right: 20px;
+        font-size: 18px;
+    }
+
+    .col-md-4 .nav-link:last-child {
+        margin-top: 20px;
+    }
+
+    .logo {
+        margin: 30px 0;
+    }
+
+    .logo img {
+        width: 140px;
+    }
+
+    .col-md-5>.row {
+        justify-content: center;
+    }
+
+    .col-md-5 .col {
+        margin: 0 15px;
+    }
+
+}
+
+
+/* ================= HERO SECTION ================= */
+
+.hero-section {
+    width: 100%;
+    padding-top: 100px;
+}
+
+
+/* ================= HERO CONTENT ================= */
+
+.hero-content {
+    padding-left: 0;
+
+    /* Image ko iske according position karenge */
+    position: relative;
+
+    /* Text ko image ke upar rakhega */
+    z-index: 2;
+}
+
+
+/* ================= HERO IMAGE ================= */
+
+.hero-image {
+    position: absolute;
+
+    /*
+       Image page ke center ke around rahegi
+       lekin hero-content ke andar hi hai
+    */
+    left: 28vw;
+
+    /*
+       Navbar logo ke just neeche se
+       image start hogi
+    */
+    top: -140px;
+
+    width: 600px;
+    height: auto;
+
+    /*
+       Image text ke peeche
+    */
+    z-index: -1;
+
+    pointer-events: none;
+}
+
+
+/* ================= SMALL HEADING ================= */
+
+.hero-content h6 {
+    font-family: Arial, sans-serif;
+
+    font-size: 18px;
+    font-weight: 600;
+
+    margin-bottom: 28px;
+
+    position: relative;
+    z-index: 2;
+}
+
+
+/* ================= MAIN HEADING ================= */
+
+.hero-content h1 {
+    color: black;
+
+    font-family: "DM Serif Display", serif;
+
+    font-size: 82px;
+    font-weight: 400;
+
+    line-height: 1.3;
+
+    margin: 0;
+
+    transform: scaleX(1.1);
+    transform-origin: left;
+
+    position: relative;
+    z-index: 2;
+}
+
+
+/* ================= PARAGRAPH ================= */
+
+.hero-content p {
+    font-family: Arial, sans-serif;
+
+    font-size: 20px;
+
+    line-height: 1.8;
+
+    margin-top: 25px;
+    margin-bottom: 50px;
+
+    max-width: 600px;
+
+    position: relative;
+    z-index: 2;
+}
+
+
+/* ================= SHOP NOW BUTTON ================= */
+
+.shop-btn {
+    display: inline-block;
+
+    padding: 18px 32px;
+
+    font-family: Arial, sans-serif;
+
+    font-size: 16px;
+    font-weight: bold;
+
+    color: black;
+
+    text-decoration: none;
+
+    border: 1px solid black;
+
+    margin-bottom: 40px;
+
+    position: relative;
+    z-index: 2;
+}
+
+
+/* Hover */
+
+.shop-btn:hover {
+    background-color: black;
+    color: white;
+}
+
+
+
+
+#div2 {
+    display: flex;
+    /* justify-content: ; */
+}
+
+.about-content {
+    width: 420px;
+    padding: 90px;
+}
+
+.about-content h2 {
+    color: black;
+
+    font-family: "DM Serif Display", serif;
+
+    font-size: 82px;
+    font-weight: 500;
+}
+
+.about-content p {
+    color: #555;
+    font-family: sans-serif;
+    font-size: 19px;
+    font-weight: lighter;
+    line-height: 1.9;
+
+}
+
+.about-image {
+    height: 950px;
+    width: 450px;
+    background-image: url(assets/about-02.jpg);
+    background-position: center;
+    background-size: cover;
+}
+
+.about-background {
+    height: 950px;
+    width: 500;
+    background-image: url(assets/about-01.jpg);
+    background-position: center;
+    background-size: cover;
+}
+
+.read-btn {
+    display: inline-block;
+
+    padding: 18px 32px;
+
+    font-family: Arial, sans-serif;
+
+    font-size: 16px;
+    font-weight: bold;
+
+    color: black;
+
+    text-decoration: none;
+
+    border: 1px solid black;
+
+    margin-top: 40px;
+}
+
+.read-btn:hover {
+    background-color: black;
+    color: white;
+}
+
+.div3 {
+    height: 850px;
+    background-image: url(assets/bg-01.jpg);
+    background-position: center;
+    background-size: cover;
+}
+
+.content {
+
+    width: 560px;
+    padding-left: 70px;
+    padding-top: 160px;
+
+}
+
+.content h2 {
+    color: black;
+    padding-top: 16px;
+
+    font-family: "DM Serif Display", serif;
+
+    font-size: 67px;
+    line-height: 1.4;
+    letter-spacing: 0.13em;
+    /* font-weight: 500; */
+}
+
+.content p {
+    line-height: 1.6;
+}
+
+
+.div4 {
+    min-height: 1040px;
+    margin-top: 20px;
+}
+
+.backg {
+
+    background-image: url(assets/bg-02.jpg);
+    background-position: center;
+    background-size: cover;
+}
+
+.div-content {
+    padding: 220px 200px 143px;
+
+}
+
+.div-content img {
+
+    height: 178px;
+    width: 280px;
+}
+
+.div-content h4 {
+
+    color: black;
+    font-family: Arial, sans-serif;
+    font-size: 30px;
+    font-weight: 600;
+    letter-spacing: 1.5px;
+}
+
+.pera {
+    color: #797979;
+    padding-right: 50px;
+    font-size: 18px;
+    font-family: sans-serif;
+    letter-spacing: 0.1rem;
+    line-height: 1.8;
+    margin-top: 20px;
+
+}
+
+
+.product-price {
+    padding: 40px 0px 0px 15px;
+}
+
+.product-price bdi {
+    /* display: block; */
+    margin-right: 25px;
+    font-size: 18px;
+    color: #555;
+}
+
+.product-price a {
+    display: inline-block;
+
+    padding: 18px 32px;
+
+    font-family: Arial, sans-serif;
+
+    font-size: 16px;
+    font-weight: bold;
+
+    color: black;
+
+    text-decoration: none;
+
+    border: 1px solid black;
+    margin-left: 10px;
+}
+
+.product-price a:hover {
+    background-color: black;
+    color: white;
+}
+
+
+.testimonial-title {
+    color: black;
+    font-family: "Playfair Display", serif;
+    font-size: 83px;
+    line-height: 1.1;
+    overflow-wrap: break-word;
+}
+
+.review-text {
+    font-size: 35px;
+    font-weight: 400;
+    line-height: 1.6;
+    font-style: italic;
+    overflow-wrap: break-word;
+}
+
+.stars {
+    padding-top: 26px;
+    color: #f2a94a;
+    font-size: 20px;
+    letter-spacing: 1px;
+}
+
+.read-more {
+    letter-spacing: 1px;
+    line-height: 1;
+    font-weight: 700;
+    font-size: 17px;
+    padding: 13px 27px;
+}
+
+/* section  */
+
+
+
+.care-section {
+    width: 100%;
+    margin: 0;
+    padding :0;
+    overflow: hidden;
+}
+
+.care-content {
+    padding-top: 164px;
+    padding-right: 200px ;
+}
+
+.care-title {
+    font-size: 40px;
+    line-height: 1.2;
+    margin-bottom: 28px;
+}
+
+.care-text {
+    color: #5d6875;
+    font-size: 20px;
+    line-height: 1.6;
+    max-width: 620px;
+    margin-bottom: 65px;
+}
+
+
+.care-image {
+    width: 100%;
+    height: 700px;
+    background-image: url("assets/bg-03.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+/* ================= REUSABLE PRODUCT CARD STYLES ================= */
+
+.product-img-wrapper {
+    background-color: #f6f6f6 !important;
+    aspect-ratio: 1 / 1;
+    transition: background-color 0.3s ease;
+}
+
+.product-img {
+    max-height: 80%;
+    object-fit: contain;
+    transition: opacity 0.4s ease, transform 0.4s ease;
+}
+
+/* Smooth Image Hover Swap */
+.product-card:hover .product-img.main-img {
+    opacity: 0;
+}
+
+.product-card:hover .product-img.hover-img {
+    opacity: 1 !important;
+}
+
+/* Hover Action Circular Buttons (Top-Right) */
+.hover-actions {
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    transform: translateY(-4px);
+    z-index: 10;
+}
+
+.product-card:hover .hover-actions {
+    opacity: 1 !important;
+    transform: translateY(0);
+}
+
+.hover-actions .btn {
+    width: 40px;
+    height: 40px;
+    transition: background-color 0.2s ease, color 0.2s ease, transform 0.2s ease;
+}
+
+.hover-actions .btn:hover {
+    background-color: #000000 !important;
+    color: #ffffff !important;
+    transform: scale(1.08);
+}
+
+/* Product Typography & Card Polish */
+.product-title {
+    font-size: 0.9rem;
+    letter-spacing: 0.5px;
+    font-family: Arial, sans-serif;
+}
+
+.product-price {
+    font-size: 0.9rem;
+}
+
+.product-card {
+    cursor: pointer;
+    transition: transform 0.2s ease;
+}

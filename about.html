@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - Riccardo Eyewear</title>
+    <meta name="description" content="Learn about Riccardo Eyewear, a premium eyewear brand from Milan, Italy. Discover our vision and craftsmanship.">
+    <meta name="keywords" content="about Riccardo Eyewear, eyewear brand Milan, Italian sunglasses">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://www.riccardoeyewear.com/about.html">
+    <!-- OpenGraph -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="About Us - Riccardo Eyewear">
+    <meta property="og:description" content="Learn about Riccardo Eyewear, a premium eyewear brand from Milan, Italy. Discover our vision and craftsmanship.">
+    <meta property="og:url" content="https://www.riccardoeyewear.com/about.html">
+    <meta property="og:image" content="https://www.riccardoeyewear.com/assets/website_logo.png">
+    <meta property="og:site_name" content="Riccardo Eyewear">
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="About Us - Riccardo Eyewear">
+    <meta name="twitter:description" content="Learn about Riccardo Eyewear, a premium eyewear brand from Milan, Italy. Discover our vision and craftsmanship.">
+    <meta name="twitter:image" content="https://www.riccardoeyewear.com/assets/website_logo.png">
+
+    <!-- Bootstrap 5 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=DM+Serif+Display&family=Montserrat:wght@400;500;600;700&family=Yeseva+One&display=swap"
+        rel="stylesheet">
+
+    <!-- CSS Links -->
+    <link rel="stylesheet" href="header.css">
+    <link rel="stylesheet" href="footer.css">
+    <link rel="stylesheet" href="about.css">
+</head>
+
+<body>
+
+    <!-- HEADER NAVBAR -->
+    <header class="border-bottom" id="main_div">
+        <div class="container-fluid">
+            <div id="header-nav"></div>
+        </div>
+
+        <h1 class="text-dark text-center">About Us</h1>
+    </header>
+
+    <!-- SLIDE-OUT CART PANEL DRAWER -->
+    <div class="cart-overlay" id="cartOverlay" onclick="closeCartPanel()"></div>
+    <div class="cart-panel bg-white d-flex flex-column" id="cartPanel">
+        <div class="d-flex justify-content-between align-items-center px-4 py-3 border-bottom">
+            <h6 class="mb-0 fw-bold text-uppercase">Shopping Cart</h6>
+            <button class="btn btn-link text-dark p-0 fs-5 text-decoration-none"
+                onclick="closeCartPanel()">&#x2715;</button>
+        </div>
+        <div class="flex-grow-1 overflow-auto px-4 py-3" id="cartPanelItems"></div>
+        <div class="border-top px-4 py-3">
+            <div class="d-flex justify-content-between fw-semibold mb-3 pb-3 border-bottom">
+                <span>Subtotal:</span>
+                <span id="cartPanelSubtotal">$0.00</span>
+            </div>
+            <button class="btn btn-outline-dark w-100 fw-bold text-uppercase mb-2 cart-btn"
+                onclick="window.location.href='cart.html'">VIEW CART</button>
+            <button class="btn btn-outline-dark w-100 fw-bold text-uppercase cart-btn"
+                onclick="window.location.href='checkout.html'">CHECKOUT</button>
+        </div>
+    </div>
+
+    <!-- MAIN ABOUT US CONTENT SECTION -->
+    <main>
+        <!-- ABOUT US CONTENT -->
+        <section class="about-us-section mb-5">
+            <div class="container-fluid px-5">
+
+                <div class="row position-relative">
+
+                    <!-- HEADING -->
+                    <div class=" position-relative">
+                        <h6 class="about-subheading fw-bold mb-4">
+                            About us
+                        </h6>
+
+                        <div>
+
+                            <h1 class="about-heading mb-0">
+                                We are an
+                                eyewear brand
+                                from Milan,
+                                Italy
+                            </h1>
+                        </div>
+                    </div>
+
+                    <!-- PARAGRAPH -->
+                    <div class="col-12 col-xl-4 pe-5 offset-lg-1 about-paragraph-column">
+                        <p class="about-text mb-0">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                            Nunc iaculis sapien erat. Sed ornare lectus sit amet felis
+                            posuere, semper sodales risus iaculis. Sed quis sodales magna.
+                            Ut in efficitur leo. Proin vel commodo justo, vitae pellentesque
+                            enim. Curabitur ultrices fringilla cursus. Nulla sed laoreet risus.
+                        </p>
+                    </div>
+
+                </div>
+
+            </div>
+        </section>
+
+        <div class="img">
+
+        </div>
+
+
+        <!-- OUR VISION SECTION -->
+        <section class="vision-section mt-5">
+            <div class="container">
+                <div class="row align-items-start g-4 g-lg-5">
+                    <!-- Left Column: Heading & Image -->
+                    <div class="col-12 col-md-6 col-lg-5 col-xl-6">
+                        <h2 class="vision-heading">
+                            Our<br>
+                            Vision
+                        </h2>
+                        <img src="assets/about-03.jpg" alt="Our Vision" class="vision-img img-fluid">
+                    </div>
+                    <!-- Right Column: Text Content -->
+                    <div class="col-12  col-lg-6 col-xl-5 pt-2 pt-md-0 right_colum">
+                        <div class="vision-subheading fw-bold">Metus eu nisl vehicula</div>
+                        <h3 class="vision-title-right fw-bold">
+                            Integer tristique metus eu nisl<br class="d-none d-sm-inline"> vehicula et
+                        </h3>
+                        <p class="vision-paragraph mb-4 mt-3">
+                            Vivamus sem enim, viverra et maximus eget, volutpat pellentesque lacus. Proin non felis
+                            dictum, lacinia enim in, tristique ex. Fusce ac aliquam est. Nunc molestie sapien lacus. Nam
+                            sagittis, tortor feugiat sodales lobortis, sapien ex efficitur sem, vel pharetra ante turpis
+                            ut purus. Phasellus dignissim mollis auctor. Quisque egestas turpis et sem semper bibendum.
+                            Praesent eleifend turpis nec ex blandit, non vehicula dui congue. Mauris interdum mauris
+                            dolor.
+                        </p>
+                        <p class="vision-paragraph">
+                            Sed in mauris tortor. Maecenas ullamcorper nisi a maximus consequat. Donec imperdiet tempus
+                            nisl id aliquam. Nunc aliquet quis orci nec pharetra.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- FOOTER NAVBAR -->
+    <div id="footer-nav"></div>
+
+    <!-- JavaScript Files -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="header.js"></script>
+    <script src="footer.js"></script>
+
+</body>
+
+</html>

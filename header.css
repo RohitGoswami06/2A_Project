@@ -1,0 +1,184 @@
+html,
+body {
+    overflow-x: hidden;
+    max-width: 100%;
+}
+
+.nav-linkk {
+    color: #555;
+    font-family: "Montserrat", sans-serif;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 700;
+    text-transform: uppercase;
+    line-height: 65px;
+    position: relative;
+}
+
+/* ===== LOGO ===== */
+.header-logo {
+    width: 120px;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+
+/* Logo column mobile center */
+.logo-col {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+@media (min-width: 1401px) {
+    /* Yahan apni CSS likho */
+
+    .logo-col{
+
+        margin-right: 0px !important;
+    }
+}
+
+/* White background header — active tab #555, others #000 */
+.header-white .nav-linkk {
+    color: #000;
+}
+
+.header-white .nav-linkk.active {
+    color: #555;
+}
+
+.header-white .nav-linkk::after {
+    background-color: #000;
+}
+
+.header-white .nav-linkk.active::after {
+    background-color: #555;
+}
+
+/* Dark/image background header — active tab #000, others #555 */
+.header-dark .nav-linkk {
+    color: #555;
+}
+
+.header-dark .nav-linkk.active {
+    color: #000;
+}
+
+.header-dark .nav-linkk::after {
+    background-color: #555;
+}
+
+.header-dark .nav-linkk.active::after {
+    background-color: #000;
+}
+
+.nav-linkk::after {
+    content: '';
+    position: absolute;
+    bottom: -30px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: #555;
+    transition: width 0.3s ease;
+}
+
+.nav-linkk:hover::after {
+    width: 100%;
+}
+
+.cart-panel {
+    position: fixed;
+    top: 0;
+    right: -420px;
+    width: 380px;
+    height: 100vh;
+    z-index: 9999;
+    box-shadow: -4px 0 20px rgba(0, 0, 0, 0.15);
+    transition: right 0.3s ease;
+    font-family: "Montserrat", sans-serif;
+    overflow-x: hidden;
+}
+
+.cart-panel.open {
+    right: 0;
+}
+
+@media (max-width: 480px) {
+    .cart-panel {
+        width: 100vw;
+        right: -100vw;
+    }
+}
+
+/* Navbar min-height responsive */
+@media (max-width: 991px) {
+    .navbar {
+        min-height: auto;
+        padding: 10px 0;
+    }
+
+    .row {
+        --bs-gutter-x: 0;
+    }
+}
+
+@media (max-width: 767px) {
+    .ms-5 {
+        margin-left: 0 !important;
+    }
+
+    .me-5 {
+        margin-right: 0 !important;
+    }
+
+    .container-fluid {
+        padding-left: 12px !important;
+        padding-right: 12px !important;
+    }
+}
+
+.cart-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.3);
+    z-index: 9998;
+    display: none;
+}
+
+.cart-overlay.open {
+    display: block;
+}
+
+.cart-qty button {
+    width: 28px;
+    height: 28px;
+    border: 1px solid #ccc;
+    background: #fff;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.cart-qty span {
+    width: 36px;
+    height: 28px;
+    border-top: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+    font-size: 13px;
+}
+
+.cart-btn:hover {
+    background: #000 !important;
+    color: #fff !important;
+}
+
+.cart-count {
+    position: absolute;
+    top: -6px;
+    right: -8px;
+    width: 16px;
+    height: 16px;
+    font-size: 10px;
+}

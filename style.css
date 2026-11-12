@@ -1,0 +1,1077 @@
+/* ================= UNIVERSAL RESET ================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    overflow-x: hidden;
+    max-width: 100%;
+}
+
+/* ================= HEADER ================= */
+
+header {
+    height: 800px;
+    background-image: url(assets/firstpage_bg.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: top center;
+}
+
+
+/* ================= NAVBAR ================= */
+
+.navbar {
+    /* min-height: 180px; */
+    position: relative;
+}
+
+
+/* ================= MOBILE ================= */
+
+@media (max-width: 767px) {
+
+    .navbar {
+        min-height: auto;
+    }
+
+}
+
+
+/* ================= HERO SECTION ================= */
+
+.hero-section {
+    width: 100%;
+    padding-top: 70px;
+}
+
+
+/* ================= HERO CONTENT ================= */
+
+.hero-content {
+    padding-left: 0;
+
+    /* Image ko iske according position karenge */
+    position: relative;
+
+    /* Text ko image ke upar rakhega */
+    z-index: 2;
+}
+
+
+/* ================= HERO IMAGE ================= */
+
+.hero-image {
+    position: absolute;
+
+    left: 25vw;
+
+    top: -110px;
+
+    width: 600px;
+    height: auto;
+
+    z-index: -1;
+
+    pointer-events: none;
+}
+
+
+/* ================= SMALL HEADING ================= */
+
+.hero-content h6 {
+    font-family: "Montserrat", sans-serif;
+
+    font-size: 14px;
+    font-weight: 700;
+
+    margin-bottom: 24px;
+
+    position: relative;
+    z-index: 2;
+}
+
+
+/* ================= MAIN HEADING ================= */
+
+.hero-content h1 {
+    color: black;
+
+    font-family: "Yeseva One", serif;
+
+    font-size: 75px;
+    font-weight: bold;
+
+    line-height: 1.3;
+
+    margin: 0;
+
+    transform: scaleX(1.1);
+    transform-origin: left;
+
+    position: relative;
+    z-index: 2;
+}
+
+
+/* ================= PARAGRAPH ================= */
+
+.hero-content p {
+    font-family: Arial, sans-serif;
+
+    font-size: 18px;
+
+    line-height: 1.8;
+
+    margin-top: 25px;
+    margin-bottom: 40px;
+
+    max-width: 600px;
+
+    position: relative;
+    z-index: 2;
+}
+
+
+/* ================= SHOP NOW BUTTON ================= */
+
+.shop-btn {
+    display: inline-block;
+
+    padding: 18px 32px;
+
+    font-family: Arial, sans-serif;
+
+    font-size: 16px;
+    font-weight: bold;
+
+    color: black;
+
+    text-decoration: none;
+
+    border: 1px solid black;
+
+    margin-bottom: 40px;
+
+    position: relative;
+    z-index: 2;
+}
+
+
+/* Hover */
+
+.shop-btn:hover {
+    background-color: black;
+    color: white;
+}
+
+
+
+
+.about-content {
+    padding: 80px 70px 80px 70px;
+    margin-left: 27px;
+}
+
+.about-content h2 {
+    color: black;
+    font-family: "DM Serif Display", serif;
+    font-size: 70px;
+    font-weight: 500;
+}
+
+.about-content p {
+    color: #555;
+    font-family: sans-serif;
+    font-size: 17px;
+    font-weight: lighter;
+    line-height: 1.9;
+}
+
+.about-image {
+    min-height: 840px;
+    width: 420px;
+    background-image: url(assets/about-02.jpg);
+    background-position: center;
+    background-size: cover;
+}
+
+.about-background {
+    min-height: 840px;
+    width: 405px;
+    background-image: url(assets/about-01.jpg);
+    background-position: center;
+    background-size: cover;
+}
+
+.read-btn {
+    display: inline-block;
+    padding: 10px 32px;
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    font-weight: bold;
+    color: black;
+    text-decoration: none;
+    border: 1px solid black;
+    margin-top: 40px;
+}
+
+.read-btn:hover {
+    background-color: black;
+    color: white;
+
+
+}
+
+.div3 {
+    height: 830px;
+    background-image: url(assets/bg-01.jpg);
+    background-position: center;
+    background-size: cover;
+}
+
+.content {
+
+    width: 560px;
+    padding-left: 75px;
+    padding-top: 125px;
+
+}
+
+.content h2 {
+    color: black;
+
+    font-family: "DM Serif Display", serif;
+
+    font-weight: 600;
+    font-size: 63px;
+    line-height: 1.4;
+    letter-spacing: 0.10em;
+    /* font-weight: 500; */
+}
+
+.content p {
+    line-height: 1.6;
+}
+
+
+.div4 {
+    min-height: 955px;
+    margin-top: 20px;
+}
+
+.backg {
+
+    background-image: url(assets/bg-02.jpg);
+    background-position: center;
+    background-size: cover;
+}
+
+.div-content {
+    padding: 190px 180px 143px 180px;
+
+}
+
+.div-content img {
+
+    height: 160px;
+    width: 250px;
+}
+
+.div-content h4 {
+
+    color: black;
+    font-family: Arial, sans-serif;
+    font-size: 28px;
+    font-weight: 600;
+    /* letter-spacing: 1.3px; */
+}
+
+.pera {
+    color: #797979;
+    padding-right: 50px;
+    font-size: 18px;
+    font-family: sans-serif;
+    letter-spacing: 0.1rem;
+    line-height: 1.8;
+    margin-top: 20px;
+
+}
+
+
+.product-price {
+    padding: 40px 0px 0px 15px;
+}
+
+.product-price bdi {
+    /* display: block; */
+    margin-right: 25px;
+    font-size: 18px;
+    color: #555;
+}
+
+.product-price a {
+    display: inline-block;
+
+    padding: 14px 32px;
+
+    font-family: Arial, sans-serif;
+
+    font-size: 16px;
+    font-weight: bold;
+
+    color: black;
+
+    text-decoration: none;
+
+    border: 1px solid black;
+    margin-left: 10px;
+    border-radius: 0%;
+}
+
+.product-price a:hover {
+    background-color: black;
+    color: white;
+}
+
+
+.testimonial-title {
+    color: black;
+    font-family: "Playfair Display", serif;
+    font-size: 70px;
+    line-height: 1.1;
+    overflow-wrap: break-word;
+}
+
+.review-text {
+    font-size: 35px;
+    font-weight: 400;
+    line-height: 1.6;
+    font-style: italic;
+    overflow-wrap: break-word;
+}
+
+.stars {
+    padding-top: 26px;
+    color: #f2a94a;
+    font-size: 20px;
+    letter-spacing: 1px;
+}
+
+.read-more {
+    letter-spacing: 1px;
+    line-height: 1;
+    font-weight: 700;
+    font-size: 17px;
+    padding: 13px 27px;
+}
+
+/* section  */
+
+
+
+.care-section {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    /* overflow: hidden; */
+}
+
+.care-content {
+    padding-top: 144px;
+    /* padding-right: 200px ; */
+}
+
+.care-title {
+    font-size: 37px;
+    line-height: 1.2;
+    margin-bottom: 25px;
+}
+
+.care-text {
+    color: #5d6875;
+    font-size: 17px;
+    /* line-height: 1.6; */
+    max-width: 620px;
+    margin-bottom: 65px;
+}
+
+
+.care-image {
+    width: 100%;
+    height: 700px;
+    background-image: url("assets/bg-03.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    overflow: hidden;
+}
+
+/* Facility / Features Section */
+.facility-section {
+    border: 1px solid #e5e5e5;
+}
+
+.facility {
+    padding-top: 30px;
+    padding-bottom: 85px;
+    border-bottom: 1px solid #e5e5e5;
+}
+
+.facility:last-child {
+    border-bottom: none;
+}
+
+@media (min-width: 768px) {
+    .facility {
+        border-bottom: none;
+        border-right: 1px solid #e5e5e5;
+    }
+
+    .facility:last-child {
+        border-right: none;
+    }
+}
+
+.facility-icon {
+    height: 38px;
+    max-width: 48px;
+    margin-bottom: 28px;
+}
+
+.facility-heading {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 23px;
+    line-height: 1.15;
+}
+
+.facility-text {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 18px;
+    line-height: 1.65;
+    color: #666666;
+    max-width: 200px;
+}
+
+@media (max-width: 991.98px) {
+    .facility {
+        padding-top: 60px;
+        padding-bottom: 65px;
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+
+    .facility-icon {
+        height: 34px;
+        margin-bottom: 22px;
+    }
+
+    .facility-heading {
+        font-size: 24px;
+        margin-bottom: 14px;
+    }
+
+    .facility-text {
+        font-size: 15px;
+        max-width: 190px;
+    }
+
+
+}
+
+
+
+@media (max-width: 767.98px) {
+    .facility {
+        padding-top: 45px;
+        padding-bottom: 45px;
+    }
+
+    .facility-icon {
+        height: 34px;
+        margin-bottom: 20px;
+    }
+
+    .facility-heading {
+        font-size: 22px;
+        margin-bottom: 12px;
+    }
+
+    .facility-text {
+        font-size: 15px;
+        max-width: 240px;
+    }
+}
+
+/* ==========================================================================
+   RESPONSIVE — added below, desktop styles above unchanged
+   ========================================================================== */
+
+/* Testimonial section — replaces inline style */
+.testimonial-section {
+    /* padding-left: 575px;
+    padding-right: 575px; */
+    margin-top: 200px;
+    margin-bottom: 200px;
+}
+
+/* Trending heading — desktop default */
+.trending-heading {
+    font-size: 73px;
+}
+
+/* ── LARGE DESKTOP (≥1400px) ── */
+@media (min-width: 1400px) {
+    .hero-image {
+        width: 650px;
+        left: 30vw;
+    }
+}
+
+@media(min-width : 1200px) {
+    .about-background {
+        width: 29%;
+    }
+}
+
+/* ── TABLET / SMALL DESKTOP (≤1199px) ── */
+@media (max-width: 1199px) {
+    .hero-image {
+        width: 480px;
+        left: 22vw;
+    }
+
+    .hero-content h1 {
+        font-size: 60px;
+    }
+
+    .about-content {
+        padding: 60px 40px;
+    }
+
+    .about-content h2 {
+        font-size: 62px;
+    }
+
+    .div-content {
+        padding: 120px 80px 100px 80px;
+    }
+
+    .content {
+        width: 100%;
+        padding-left: 50px;
+        padding-top: 80px;
+    }
+
+    .content h2 {
+        font-size: 50px;
+    }
+
+    .testimonial-title {
+        font-size: 52px;
+    }
+
+    .review-text {
+        font-size: 26px;
+    }
+
+    .care-content {
+        padding-top: 80px;
+    }
+
+    .care-section .col-md-6 {
+        margin-left: 0 !important;
+    }
+
+    .care-image {
+        height: 110%;
+    }
+
+
+    .testimonial-section {
+        padding-left: 200px;
+        padding-right: 200px;
+        margin-top: 120px;
+        margin-bottom: 120px;
+    }
+
+    .trending-heading {
+        font-size: 52px !important;
+    }
+
+    .about-image {
+        width: 50%;
+        margin-bottom: 20px;
+    }
+
+    .about-background {
+        width: 98%;
+        margin-left: 10px;
+    }
+
+    .about-content {
+        width: 35%;
+        /* padding: 0px; */
+        /* padding-left: 10px; */
+
+    }
+}
+
+/* ── TABLET (≤991px) ── */
+@media (max-width: 991px) {
+    header {
+        height: auto;
+        min-height: 500px;
+        padding-bottom: 40px;
+    }
+
+    .hero-image {
+        width: 360px;
+        left: 38%;
+        top: -60px;
+    }
+
+    .hero-content h1 {
+        font-size: 48px;
+    }
+
+    .hero-content p {
+        font-size: 16px;
+    }
+
+    .hero-section {
+        padding-top: 40px;
+    }
+
+    .about-content {
+        padding: 40px;
+        margin-left: 0;
+        min-width: 40%;
+    }
+
+    .about-content h2 {
+        font-size: 42px;
+    }
+
+    .about-image {
+        margin-bottom: 20px;
+    }
+
+    .about-background {
+        width: 90%;
+        margin-left: 30px;
+    }
+
+    .div3 {
+        height: auto;
+        min-height: 500px;
+        padding-bottom: 60px;
+    }
+
+    .content {
+        width: 100%;
+        padding-left: 30px;
+        padding-top: 60px;
+        padding-right: 30px;
+    }
+
+    .content h2 {
+        font-size: 42px;
+    }
+
+    .div4 {
+        min-height: auto;
+    }
+
+    .div-content {
+        padding: 60px 40px;
+    }
+
+    .care-content {
+
+        margin-left: 0px;
+    }
+
+    .care-section .col-md-6 {
+        margin-left: 0 !important;
+    }
+
+    .care-image {
+        /* width: 100%; */
+        height: 400px;
+        margin-left: 0px;
+    }
+
+    .care-title {
+        font-size: 30px;
+    }
+
+    .testimonial-title {
+        font-size: 42px;
+    }
+
+    .review-text {
+        font-size: 22px;
+    }
+
+    .testimonial-section {
+        padding-left: 60px;
+        padding-right: 60px;
+        margin-top: 80px;
+        margin-bottom: 80px;
+    }
+
+    .trending-heading {
+        font-size: 42px !important;
+    }
+}
+
+/* ── MOBILE (≤767px) ── */
+@media (max-width: 767px) {
+    header {
+        height: auto;
+        min-height: auto;
+        padding-bottom: 30px;
+    }
+
+    .hero-image {
+        position: relative;
+        left: auto;
+        top: auto;
+        width: 100%;
+        max-width: 300px;
+        display: block;
+        margin: 0 auto 20px;
+    }
+
+    .hero-content {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+
+    .hero-content h1 {
+        font-size: 38px;
+        transform: none;
+    }
+
+    .hero-content p {
+        font-size: 15px;
+    }
+
+    .hero-section {
+        padding-top: 20px;
+    }
+
+    .about-content {
+        padding: 30px 20px;
+        margin-left: 0;
+        margin-right: 0 !important;
+    }
+
+    .about-content h2 {
+        font-size: 36px;
+    }
+
+    .about-image {
+        min-height: 360px;
+        width: 40%;
+        margin: 0 !important;
+    }
+
+    .about-background {
+        min-height: 260px;
+        width: 100%;
+        margin-top: 20px;
+    }
+
+    .div3 {
+        height: auto;
+        min-height: auto;
+        padding-bottom: 40px;
+    }
+
+    .content {
+        width: 100%;
+        padding: 40px 20px;
+    }
+
+    .content h2 {
+        font-size: 32px;
+    }
+
+    .div4 {
+        min-height: auto;
+    }
+
+    .backg {
+        min-height: 280px;
+    }
+
+    .div-content {
+        padding: 30px 20px;
+    }
+
+    .div-content img {
+        width: 100%;
+        height: auto;
+        max-width: 200px;
+    }
+
+    .pera {
+        padding-right: 0;
+    }
+
+    .testimonial-title {
+        font-size: 32px;
+    }
+
+    .review-text {
+        font-size: 18px;
+    }
+
+    .testimonial-section {
+        padding-left: 20px;
+        padding-right: 20px;
+        margin-top: 60px;
+        margin-bottom: 60px;
+    }
+
+    .care-content {
+        padding: 40px 20px;
+    }
+
+    .care-image {
+        width: 100%;
+        height: 260px;
+    }
+
+    .care-title {
+        font-size: 26px;
+    }
+
+    .care-text {
+        font-size: 15px;
+        padding-right: 0 !important;
+        max-width: 100%;
+    }
+
+    .trending-heading {
+        font-size: 32px !important;
+    }
+
+    .care-section .col-md-5 {
+        padding-right: 0 !important;
+        margin-right: 0 !important;
+    }
+
+    .care-section .col-md-6 {
+        margin-left: 0 !important;
+    }
+
+    .about-image {
+        width: 50%;
+        margin-bottom: 20px;
+    }
+
+    .about-background {
+        width: 98%;
+        margin-left: 10px;
+    }
+
+    .about-content {
+        width: 35%;
+        /* padding: 0px; */
+        /* padding-left: 10px; */
+
+    }
+}
+
+/* ── SMALL MOBILE (≤575px) ── */
+@media (max-width: 575px) {
+    .hero-content h1 {
+        font-size: 30px;
+    }
+
+    .hero-content p {
+        font-size: 17px;
+    }
+
+    .shop-btn {
+        padding: 14px 22px;
+        font-size: 14px;
+    }
+
+    .about-content h2 {
+        font-size: 28px;
+    }
+
+    .content h2 {
+        font-size: 26px;
+    }
+
+    .div-content {
+        padding: 20px 15px;
+    }
+
+    .testimonial-title {
+        font-size: 26px;
+    }
+
+    .review-text {
+        font-size: 16px;
+    }
+
+    .testimonial-section {
+        padding-left: 15px;
+        padding-right: 15px;
+        margin-top: 40px;
+        margin-bottom: 90px;
+    }
+
+    .care-image {
+        height: 300px;
+    }
+
+    .care-title {
+        font-size: 22px;
+    }
+
+    .trending-heading {
+        font-size: 26px !important;
+
+    }
+
+
+
+}
+
+/* ── VERY SMALL MOBILE (≤375px) ── */
+/* @media (max-width: 375px) {
+    .hero-content h1 {
+        font-size: 29px;
+    }
+
+    .about-content h2 {
+        font-size: 22px;
+    }
+
+    .content h2 {
+        font-size: 20px;
+    }
+
+    .testimonial-title {
+        font-size: 20px;
+    }
+
+    .review-text {
+        font-size: 14px;
+    }
+
+    .care-title {
+        font-size: 18px;
+    }
+
+    .trending-heading {
+        font-size: 22px !important;
+    }
+} */
+
+@media (max-width: 720px) {
+    .hero-content h1 {
+        font-size: 39px;
+    }
+
+    .about-content h2 {
+        font-size: 34px;
+    }
+
+    .content h2 {
+        font-size: 27px;
+        font-weight: bold;
+    }
+
+    .testimonial-title {
+        font-size: 39px;
+    }
+
+    .review-text {
+        font-size: 14px;
+    }
+
+    .care-title {
+        font-size: 18px;
+    }
+
+    .trending-heading {
+        font-size: 45px !important;
+    }
+
+    .about-image {
+        min-height: 660px;
+        width: 90%;
+        margin: 40px 25px 20px 15px !important;
+    }
+
+    .about-background {
+        min-height: 660px;
+        width: 90%;
+        margin: 0px 25px 0px 15px !important;
+    }
+
+    .div3 {
+        background-image: url(assets/bg-01.jpg);
+        background-position: left;
+    }
+
+    .backg {
+        min-height: 580px;
+    }
+
+
+    .div-content {
+        margin-top: -90px;
+        padding: 20px 15px;
+        text-align: center;
+    }
+
+    .pera {
+        padding-left: 30px;
+    }
+
+    @media (min-width: 720px) {
+        .care-section .container-fluid>div:has(.care-content):has(.care-image) {
+            margin-top: 40x;
+            display: flex;
+            flex-direction: column-reverse;
+        }
+
+        .care-section .container-fluid>div:has(.care-content):has(.care-image)>* {
+            width: 100%;
+            margin: 0 !important;
+        }
+    }
+
+    @media (max-width: 720px) {
+        #trendingProductsContainer>* {
+            flex: 0 0 50%;
+            max-width: 50%;
+        }
+    }
+
+}
+
+@media (min-width: 1300px) {
+    #div2 {
+        display: flex;
+        flex-wrap: nowrap;
+    }
+
+    #div2>div {
+        flex: 1 1 0;
+        min-width: 0;
+    }
+}

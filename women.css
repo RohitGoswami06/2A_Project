@@ -1,0 +1,119 @@
+/* ==========================================================================
+   Eyewear Store - Women Products Page Styles (Matching Reference Image)
+   ========================================================================== */
+
+body {
+    font-family: 'DM Sans', sans-serif;
+    color: #111;
+    background-color: #fff;
+    overflow-x: hidden;
+}
+
+/* Breadcrumb */
+.women-breadcrumb {
+    font-size: 16px;
+    color: #777;
+    margin-top: 20px;
+}
+
+.women-breadcrumb a {
+    color: #777;
+    text-decoration: none;
+}
+
+.women-breadcrumb a:hover {
+    color: #000;
+}
+
+/* Large Page Title */
+.women-title {
+    font-family: 'DM Serif Display', 'Yeseva One', serif;
+    font-size: 115px;
+    font-weight: 400;
+    color: #000;
+}
+
+@media (max-width: 1199px) { .women-title { font-size: 80px; } }
+@media (max-width: 991px)  { .women-title { font-size: 60px; } }
+@media (max-width: 767px)  { .women-title { font-size: 48px; } }
+@media (max-width: 575px)  { .women-title { font-size: 36px; } }
+@media (max-width: 375px)  { .women-title { font-size: 28px; } }
+
+/* Results & Sorting Bar */
+.results-count {
+    font-size: 19px;
+    color: #666;
+}
+
+.sorting-select {
+    border: none;
+    background: transparent;
+    font-size: 17px;
+    color: #555;
+    cursor: pointer;
+    outline: none;
+}
+
+.sorting-select:focus {
+    box-shadow: none;
+    border-color: #000;
+}
+
+/* Product Card Styling (Matching Reference Image) */
+.women-product-card {
+    margin-bottom: 40px;
+}
+
+.women-img-box {
+    position: relative;
+    background-color: #f4f4f4;
+    aspect-ratio: 1 / 1;
+    overflow: hidden;
+}
+
+.women-img-box img {
+    transition: opacity 0.3s ease;
+}
+
+.women-img-box .hover-img {
+    opacity: 0;
+}
+
+.women-product-card:hover .normal-img {
+    opacity: 0;
+}
+
+.women-product-card:hover .hover-img {
+    opacity: 1;
+}
+
+/* Action Buttons (Hover) */
+.women-actions {
+    opacity: 0;
+    transform: translateX(10px);
+    transition: all 0.3s ease;
+}
+
+.women-product-card:hover .women-actions {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+@media (hover: none) {
+    .women-actions {
+        opacity: 1;
+        transform: none;
+    }
+}
+
+.women-card-title {
+    font-family: 'DM Serif Display', 'Yeseva One', serif;
+    font-size: 17px;
+    font-weight: 700;
+    color: #000;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-top: 14px;
+    margin-bottom: 4px;
+}
+

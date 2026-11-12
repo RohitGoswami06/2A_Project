@@ -1,0 +1,7 @@
+User-agent: *
+Allow: /
+Disallow: /cart.html
+Disallow: /checkout.html
+Disallow: /order-complete.html
+
+Sitemap: https://www.riccardoeyewear.com/sitemap.xml

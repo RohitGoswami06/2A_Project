@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Detail - Riccardo Eyewear</title>
+    <meta name="description" content="View detailed information about our premium sunglasses at Riccardo Eyewear. Free shipping on all orders.">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://www.riccardoeyewear.com/product-detail.html">
+    <!-- OpenGraph -->
+    <meta property="og:type" content="product">
+    <meta property="og:title" content="Product Detail - Riccardo Eyewear">
+    <meta property="og:description" content="View detailed information about our premium sunglasses at Riccardo Eyewear. Free shipping on all orders.">
+    <meta property="og:url" content="https://www.riccardoeyewear.com/product-detail.html">
+    <meta property="og:image" content="https://www.riccardoeyewear.com/assets/website_logo.png">
+    <meta property="og:site_name" content="Riccardo Eyewear">
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Product Detail - Riccardo Eyewear">
+    <meta name="twitter:description" content="View detailed information about our premium sunglasses at Riccardo Eyewear. Free shipping on all orders.">
+    <meta name="twitter:image" content="https://www.riccardoeyewear.com/assets/website_logo.png">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Yeseva+One&family=Montserrat:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Yeseva+One&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="header.css">
+    <link rel="stylesheet" href="footer.css">
+    <link rel="stylesheet" href="product.css">
+    <link rel="stylesheet" href="product-detail.css">
+</head>
+
+<body>
+
+    <!-- HEADER -->
+    <header class="border-bottom">
+        <div class="container-fluid">
+            <div id="header-nav"></div>
+        </div>
+    </header>
+
+    <!-- CART OVERLAY -->
+    <div class="cart-overlay" id="cartOverlay" onclick="closeCartPanel()"></div>
+    <!-- CART PANEL -->
+    <div class="cart-panel bg-white d-flex flex-column" id="cartPanel">
+        <div class="d-flex justify-content-between align-items-center px-4 py-3 border-bottom">
+            <h6 class="mb-0 fw-bold text-uppercase">Shopping Cart</h6>
+            <button class="btn btn-link text-dark p-0 fs-5 text-decoration-none"
+                onclick="closeCartPanel()">&#x2715;</button>
+        </div>
+        <div class="flex-grow-1 overflow-auto px-4 py-3" id="cartPanelItems"></div>
+        <div class="border-top px-4 py-3">
+            <div class="d-flex justify-content-between fw-semibold mb-3 pb-3 border-bottom">
+                <span>Subtotal:</span>
+                <span id="cartPanelSubtotal">$0.00</span>
+            </div>
+            <button class="btn btn-outline-dark w-100 fw-bold text-uppercase mb-2 cart-btn"
+                onclick="window.location.href='cart.html'">VIEW CART</button>
+            <button class="btn btn-outline-dark w-100 fw-bold text-uppercase cart-btn"
+                onclick="window.location.href='checkout.html'">CHECKOUT</button>
+        </div>
+    </div>
+
+    <!-- LIGHTBOX MODAL -->
+    <div class="modal fade" id="lightboxModal" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-content bg-dark border-0">
+                <div class="modal-body p-0 position-relative">
+                    <button type="button" class="btn-close btn-close-white position-absolute top-0 end-0 m-3 z-3"
+                        data-bs-dismiss="modal"></button>
+                    <img id="lightboxImg" src="" alt="" class="w-100" style="max-height:90vh;object-fit:contain;">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- PRODUCT DETAILS MODAL -->
+    <div class="modal fade product-modal" id="productModal" tabindex="-1" aria-labelledby="productModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog modal-xl modal-dialog-centered">
+            <div class="modal-content">
+                <button type="button" class="btn-close position-absolute top-0 end-0 m-4 z-3" data-bs-dismiss="modal"
+                    aria-label="Close"></button>
+                <div class="modal-body">
+                    <div class="row g-0">
+                        <div class="col-12 col-md-6 d-flex">
+                            <div class="modal-product-image w-100">
+                                <div id="modalCarousel" class="carousel slide h-100" data-bs-ride="carousel"
+                                    data-bs-interval="5000">
+                                    <div id="modalCarouselInner" class="carousel-inner h-100"></div>
+                                    <button class="carousel-control-prev" type="button" data-bs-target="#modalCarousel"
+                                        data-bs-slide="prev"><span class="carousel-control-prev-icon"></span></button>
+                                    <button class="carousel-control-next" type="button" data-bs-target="#modalCarousel"
+                                        data-bs-slide="next"><span class="carousel-control-next-icon"></span></button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12 col-md-6 pb-5">
+                            <div class="modal-product-details">
+                                <div id="modalProductCategoryTop" class="modal-category-top"></div>
+                                <h2 id="productModalLabel" class="modal-product-title fw-bolder"></h2>
+                                <div class="modal-price-shipping">
+                                    <span id="modalProductPrice" class="modal-price"></span>
+                                    <span class="modal-shipping">&amp; Free Shipping</span>
+                                </div>
+                                <div id="modalProductDescription" class="modal-description"></div>
+                                <div class="modal-category-bottom">
+                                    <strong>Category:</strong>
+                                    <span id="modalProductCategoryBottom"></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- MAIN PRODUCT DETAIL SECTION -->
+    <section class="container py-5" style="padding-bottom: 100px !important;">
+        <div class="row g-5">
+
+            <!-- LEFT: IMAGE GALLERY -->
+            <div class="col-12 col-md-6 ps-0">
+                <div class="d-flex gap-3">
+
+                    <!-- THUMBNAILS -->
+                    <div class="thumb-col d-flex flex-column gap-2" id="thumbList"></div>
+
+                    <!-- MAIN IMAGE -->
+                    <div class="flex-grow-1">
+                        <div class="main-img-wrap">
+                            <img id="mainProductImg" src="" alt="Product">
+                            <button class="zoom-btn" onclick="openLightbox()">
+                                <i class="bi bi-zoom-in"></i>
+                            </button>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- RIGHT: PRODUCT INFO + ACCORDION -->
+            <div class="col-12 col-md-6">
+                <p class="detail-category mb-1" id="detailCategory"></p>
+                <h1 class="detail-title mb-3" id="detailName"></h1>
+                <div class="d-flex align-items-center gap-2 mb-3">
+                    <span class="detail-price" id="detailPrice"></span>
+                    <span class="text-muted" style="font-size:14px">&amp; Free Shipping</span>
+                </div>
+                <div class="detail-desc mb-4" id="detailDesc"></div>
+
+                <!-- QTY + ADD TO CART -->
+                <div class="d-flex align-items-center gap-3 mb-3">
+                    <div class="d-flex align-items-center">
+                        <button class="qty-btn" onclick="changeDetailQty(-1)">-</button>
+                        <div class="qty-display" id="detailQty">1</div>
+                        <button class="qty-btn" onclick="changeDetailQty(1)">+</button>
+                    </div>
+                    <button class="btn btn-dark px-4 py-2 fw-bold text-uppercase flex-grow-1"
+                        onclick="addDetailToCart()">
+                        Add to Cart
+                    </button>
+                </div>
+
+                <p class="text-muted mb-4" style="font-size:13px">Category: <span id="detailCategoryTag"></span></p>
+
+                <!-- ACCORDION -->
+                <div class="accordion border-top" id="productAccordion">
+                    <div class="accordion-item border-0 border-bottom">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed px-0 fw-semibold bg-white" type="button"
+                                data-bs-toggle="collapse" data-bs-target="#accDesc">Description</button>
+                        </h2>
+                        <div id="accDesc" class="accordion-collapse collapse" data-bs-parent="#productAccordion">
+                            <div class="accordion-body px-0">
+                                <div class="d-flex justify-content-between align-items-start py-3 border-top">
+                                    <span class="text-muted" style="font-size:14px">Size</span>
+                                    <span style="font-size:14px">XL (58-14)</span>
+                                </div>
+                                <div class="d-flex justify-content-between align-items-start py-3 border-top">
+                                    <span class="text-muted" style="font-size:14px">Shipping &amp; Returns</span>
+                                    <span class="text-end" style="font-size:14px;max-width:55%">Quisque ut augue eu dui
+                                        semper eleifend. Aliquam imperdiet nisl libero, vitae vulputate lectus fringilla
+                                        eget.</span>
+                                </div>
+                                <div class="d-flex justify-content-between align-items-start py-3 border-top">
+                                    <span class="text-muted" style="font-size:14px">Frame Description</span>
+                                    <span class="text-end" style="font-size:14px">Shape: Round<br>Color:
+                                        Pink<br>Material: Metal</span>
+                                </div>
+                                <div
+                                    class="d-flex justify-content-between align-items-start py-3 border-top border-bottom">
+                                    <span class="text-muted" style="font-size:14px">Lens Information</span>
+                                    <span class="text-end" style="font-size:14px">Class: 3P<br>Color: Pink<br>Treatment:
+                                        Classic</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item border-0 border-bottom">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed px-0 fw-semibold bg-white" type="button"
+                                data-bs-toggle="collapse" data-bs-target="#accReviews">Reviews (0)</button>
+                        </h2>
+                        <div id="accReviews" class="accordion-collapse collapse" data-bs-parent="#productAccordion">
+                            <div class="accordion-body px-0">
+                                <p class="text-muted mb-4">There are no reviews yet. Be the first to review this
+                                    product.</p>
+                                <form onsubmit="return false;">
+                                    <div class="mb-3">
+                                        <label class="form-label fw-semibold" style="font-size:13px">Your Rating</label>
+                                        <div class="d-flex gap-2">
+                                            <i class="bi bi-star fs-5" style="cursor:pointer;color:#ccc"
+                                                onclick="setRating(1)"></i>
+                                            <i class="bi bi-star fs-5" style="cursor:pointer;color:#ccc"
+                                                onclick="setRating(2)"></i>
+                                            <i class="bi bi-star fs-5" style="cursor:pointer;color:#ccc"
+                                                onclick="setRating(3)"></i>
+                                            <i class="bi bi-star fs-5" style="cursor:pointer;color:#ccc"
+                                                onclick="setRating(4)"></i>
+                                            <i class="bi bi-star fs-5" style="cursor:pointer;color:#ccc"
+                                                onclick="setRating(5)"></i>
+                                        </div>
+                                    </div>
+                                    <div class="mb-3">
+                                        <label class="form-label fw-semibold" style="font-size:13px">Your Review</label>
+                                        <textarea class="form-control rounded-0" rows="4"
+                                            placeholder="Write your review..."></textarea>
+                                    </div>
+                                    <div class="row g-3 mb-3">
+                                        <div class="col-12 col-sm-6">
+                                            <label class="form-label fw-semibold" style="font-size:13px">Name</label>
+                                            <input type="text" class="form-control rounded-0" placeholder="Your name">
+                                        </div>
+                                        <div class="col-12 col-sm-6">
+                                            <label class="form-label fw-semibold" style="font-size:13px">Email</label>
+                                            <input type="email" class="form-control rounded-0" placeholder="Your email">
+                                        </div>
+                                    </div>
+                                    <button type="submit"
+                                        class="btn btn-dark rounded-0 px-4 fw-bold text-uppercase">Submit
+                                        Review</button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- RELATED PRODUCTS -->
+    <section class="container pb-5">
+        <h4 class="fw-bold  mb-4 extra-Product text-dark" style="letter-spacing:1px">Related products</h4>
+        <div class="row g-4" id="relatedContainer"></div>
+    </section>
+
+    <!-- FOOTER -->
+    <div id="footer-nav"></div>
+
+    <!-- STICKY BOTTOM BAR -->
+    <div class="sticky-bar d-flex align-items-center gap-3" id="stickyBar">
+        <img id="stickyImg" src="" alt="" class="d-none d-sm-block">
+        <div class="flex-grow-1 d-none d-sm-block">
+            <div class="fw-semibold bar-name" id="stickyName" style="font-size:13px"></div>
+            <div class="text-muted" id="stickyPrice" style="font-size:13px"></div>
+        </div>
+        <div class="d-flex align-items-center">
+            <button class="qty-btn" onclick="changeDetailQty(-1)">-</button>
+            <div class="qty-display" id="stickyQty">1</div>
+            <button class="qty-btn" onclick="changeDetailQty(1)">+</button>
+        </div>
+        <button class="btn btn-dark px-3 py-2 fw-bold text-uppercase" style="font-size:13px"
+            onclick="addDetailToCart()">
+            Add to Cart
+        </button>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="product.js"></script>
+    <script src="header.js"></script>
+    <script src="footer.js"></script>
+    <script>
+        let detailProducts = [];
+        let detailQty = 1;
+        let currentProduct = null;
+
+        function fetchDetailProducts() {
+            getProducts()
+                .then(data => {
+                    detailProducts = data;
+                    loadProduct(getProductFromURL());
+                })
+                .catch(err => console.error("Error loading products via product.js in product-detail.html:", err));
+        }
+
+        function getProductFromURL() {
+            const params = new URLSearchParams(window.location.search);
+            const id = parseInt(params.get('id')) || 1;
+            return findProduct(id) || detailProducts[0];
+        }
+
+        function loadProduct(product) {
+            currentProduct = product;
+            if (!product) return;
+            document.title = product.name;
+
+            document.getElementById('detailCategory').textContent = product.category ? product.category.toUpperCase() : '';
+            document.getElementById('detailName').textContent = product.name;
+            document.getElementById('detailPrice').textContent = '$' + product.price.toFixed(2);
+            document.getElementById('detailCategoryTag').textContent = product.category;
+
+            const descEl = document.getElementById('detailDesc');
+            const descArr = Array.isArray(product.description) ? product.description : [product.description];
+            descEl.innerHTML = descArr.map(p => `<p>${p}</p>`).join('');
+
+            const imgs = product.images || [product.imageA, product.imageB];
+            document.getElementById('mainProductImg').src = imgs[0];
+
+            const thumbList = document.getElementById('thumbList');
+            thumbList.innerHTML = '';
+            imgs.forEach((src, i) => {
+                const div = document.createElement('div');
+                div.className = 'thumb-item' + (i === 0 ? ' active' : '');
+                div.innerHTML = `<img src="${src}" alt="">`;
+                div.onclick = () => switchImage(src, div);
+                thumbList.appendChild(div);
+            });
+
+            document.getElementById('stickyImg').src = product.imageA;
+            document.getElementById('stickyName').textContent = product.name;
+            document.getElementById('stickyPrice').textContent = '$' + product.price.toFixed(2);
+
+            renderRelated(product);
+        }
+
+        function switchImage(src, thumbEl) {
+            document.getElementById('mainProductImg').src = src;
+            document.querySelectorAll('.thumb-item').forEach(t => t.classList.remove('active'));
+            thumbEl.classList.add('active');
+        }
+
+        function openLightbox() {
+            const src = document.getElementById('mainProductImg').src;
+            document.getElementById('lightboxImg').src = src;
+            new bootstrap.Modal(document.getElementById('lightboxModal')).show();
+        }
+
+        function changeDetailQty(delta) {
+            detailQty = Math.max(1, detailQty + delta);
+            document.getElementById('detailQty').textContent = detailQty;
+            document.getElementById('stickyQty').textContent = detailQty;
+        }
+
+        function addDetailToCart() {
+            if (!currentProduct) return;
+            let cart = JSON.parse(localStorage.getItem('cart')) || [];
+            const existing = cart.find(i => i.id === currentProduct.id);
+            if (existing) {
+                existing.quantity += detailQty;
+            } else {
+                cart.push({ id: currentProduct.id, name: currentProduct.name, price: currentProduct.price, imageA: currentProduct.imageA, quantity: detailQty });
+            }
+            localStorage.setItem('cart', JSON.stringify(cart));
+            if (typeof updateHeaderCart === 'function') updateHeaderCart();
+        }
+
+        function renderRelated(current) {
+            const related = detailProducts.filter(p => p.id !== current.id && p.category === current.category).slice(0, 3);
+            const container = document.getElementById('relatedContainer');
+            container.innerHTML = '';
+            related.forEach(product => {
+                const col = document.createElement('div');
+                col.className = 'col-12 col-sm-6 col-lg-4';
+                col.innerHTML = `
+            <div class="product-card mb-4">
+                <div class="product-image position-relative">
+                    <a href="product-detail.html?id=${product.id}">
+                        <img src="${product.imageA}" alt="${product.name}" class="normal-image position-absolute top-0 start-0 w-100 h-100 object-fit-cover">
+                        <img src="${product.imageB}" alt="${product.name}" class="hover-image position-absolute top-0 start-0 w-100 h-100 object-fit-cover">
+                    </a>
+                    <div class="product-actions position-absolute top-0 end-0 d-flex flex-column gap-2 me-2 mt-2">
+                        <button type="button" class="product-action btn btn-light rounded-circle shadow-sm d-flex align-items-center justify-content-center" onclick='addToCart(${product.id}, this)'><i class="bi bi-basket"></i></button>
+                        <button type="button" class="product-action btn btn-light rounded-circle shadow-sm d-flex align-items-center justify-content-center" onclick='openProduct(${product.id})'><i class="bi bi-eye"></i></button>
+                    </div>
+                </div>
+                <div class="pt-2">
+                    <a href="product-detail.html?id=${product.id}" class="text-decoration-none text-dark">
+                        <div class="product-name text-uppercase">${product.name}</div>
+                        <div class="product-card-price">$${product.price.toFixed(2)}</div>
+                    </a>
+                </div>
+            </div>`;
+                container.appendChild(col);
+            });
+        }
+
+        function setRating(n) {
+            document.querySelectorAll('#accReviews .bi-star, #accReviews .bi-star-fill').forEach((el, i) => {
+                el.className = i < n ? 'bi bi-star-fill fs-5' : 'bi bi-star fs-5';
+                el.style.color = i < n ? '#f2a94a' : '#ccc';
+            });
+        }
+
+        fetchDetailProducts();
+    </script>
+</body>
+
+</html>

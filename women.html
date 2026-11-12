@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Women - Riccardo Eyewear</title>
+    <meta name="description" content="Shop women's premium sunglasses at Riccardo Eyewear. Browse our exclusive collection of stylish eyewear for women with free shipping.">
+    <meta name="keywords" content="women sunglasses, women eyewear, premium sunglasses for women, Riccardo Eyewear women">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://www.riccardoeyewear.com/women.html">
+    <!-- OpenGraph -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Women's Sunglasses - Riccardo Eyewear">
+    <meta property="og:description" content="Shop women's premium sunglasses at Riccardo Eyewear. Browse our exclusive collection of stylish eyewear for women with free shipping.">
+    <meta property="og:url" content="https://www.riccardoeyewear.com/women.html">
+    <meta property="og:image" content="https://www.riccardoeyewear.com/assets/website_logo.png">
+    <meta property="og:site_name" content="Riccardo Eyewear">
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Women's Sunglasses - Riccardo Eyewear">
+    <meta name="twitter:description" content="Shop women's premium sunglasses at Riccardo Eyewear. Browse our exclusive collection of stylish eyewear for women with free shipping.">
+    <meta name="twitter:image" content="https://www.riccardoeyewear.com/assets/website_logo.png">
+
+    <!-- Bootstrap 5 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=DM+Serif+Display&family=Montserrat:wght@400;500;600;700&family=Yeseva+One&display=swap"
+        rel="stylesheet">
+
+    <!-- CSS Links -->
+    <link rel="stylesheet" href="header.css">
+    <link rel="stylesheet" href="footer.css">
+    <link rel="stylesheet" href="product.css">
+    <link rel="stylesheet" href="women.css">
+</head>
+
+<body>
+
+    <!-- HEADER NAVBAR -->
+    <header class="border-bottom">
+        <div class="container-fluid">
+            <div id="header-nav"></div>
+        </div>
+    </header>
+
+    <!-- SLIDE-OUT CART PANEL DRAWER -->
+    <div class="cart-overlay" id="cartOverlay" onclick="closeCartPanel()"></div>
+    <div class="cart-panel bg-white d-flex flex-column" id="cartPanel">
+        <div class="d-flex justify-content-between align-items-center px-4 py-3 border-bottom">
+            <h6 class="mb-0 fw-bold text-uppercase">Shopping Cart</h6>
+            <button class="btn btn-link text-dark p-0 fs-5 text-decoration-none"
+                onclick="closeCartPanel()">&#x2715;</button>
+        </div>
+        <div class="flex-grow-1 overflow-auto px-4 py-3" id="cartPanelItems"></div>
+        <div class="border-top px-4 py-3">
+            <div class="d-flex justify-content-between fw-semibold mb-3 pb-3 border-bottom">
+                <span>Subtotal:</span>
+                <span id="cartPanelSubtotal">$0.00</span>
+            </div>
+            <button class="btn btn-outline-dark w-100 fw-bold text-uppercase mb-2 cart-btn"
+                onclick="window.location.href='cart.html'">VIEW CART</button>
+            <button class="btn btn-outline-dark w-100 fw-bold text-uppercase cart-btn"
+                onclick="window.location.href='checkout.html'">CHECKOUT</button>
+        </div>
+    </div>
+
+    <!-- MAIN WOMEN PRODUCTS CONTAINER -->
+    <main class="container-fluid py-5 px-4" style="min-height: 70vh;">
+
+        <!-- Breadcrumb -->
+        <nav class="women-breadcrumb mb-4">
+            <a href="index.html">Home</a> / Women
+        </nav>
+
+        <!-- Large Page Title -->
+        <h1 class="women-title mb-5">Women</h1>
+
+        <!-- Results & Sorting Bar -->
+        <div class="d-flex justify-content-between align-items-center mb-4 flex-wrap gap-2">
+            <div class="results-count mt-5 pt-4 mb-3 " id="resultsCountText">
+                Showing all 7 results
+            </div>
+            <div>
+                <select class="form-select form-select-sm sorting-select mt-4" id="sortingSelect"
+                    aria-label="Product sorting">
+                    <option value="default" selected>Default sorting</option>
+                    <option value="latest">Sort by latest</option>
+                    <option value="price-low-high">Sort by price: low to high</option>
+                    <option value="price-high-low">Sort by price: high to low</option>
+                </select>
+            </div>
+        </div>
+
+        <!-- Women Products Grid Row -->
+        <div class="row g-4" id="womenProductsContainer">
+            <!-- Dynamically populated via women.js -->
+        </div>
+
+    </main>
+
+    <!-- PRODUCT DETAILS MODAL (Reused structure from product.html) -->
+    <div class="modal fade product-modal mb-3 " id="productModal" tabindex="-1" aria-labelledby="productModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog modal-xl modal-dialog-centered">
+            <div class="modal-content">
+                <button type="button" class="btn-close position-absolute top-0 end-0 m-4 z-3" data-bs-dismiss="modal"
+                    aria-label="Close"></button>
+                <div class="modal-body">
+                    <div class="row g-0">
+                        <div class="col-12 col-md-6 d-flex">
+                            <div class="modal-product-image w-100">
+                                <div id="modalCarousel" class="carousel slide h-100" data-bs-ride="carousel"
+                                    data-bs-interval="5000">
+                                    <div id="modalCarouselInner" class="carousel-inner h-100">
+                                        <!-- Carousel images generated dynamically -->
+                                    </div>
+                                    <button class="carousel-control-prev" type="button" data-bs-target="#modalCarousel"
+                                        data-bs-slide="prev">
+                                        <span class="carousel-control-prev-icon"></span>
+                                    </button>
+                                    <button class="carousel-control-next" type="button" data-bs-target="#modalCarousel"
+                                        data-bs-slide="next">
+                                        <span class="carousel-control-next-icon"></span>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12 col-md-6 pb-5">
+                            <div class="modal-product-details">
+                                <div id="modalProductCategoryTop" class="modal-category-top">WOMEN</div>
+                                <h2 id="productModalLabel" class="modal-product-title fw-bolder">Product Title</h2>
+                                <div class="modal-price-shipping">
+                                    <span id="modalProductPrice" class="modal-price">$0.00</span>
+                                    <span class="modal-shipping">&amp; Free Shipping</span>
+                                </div>
+                                <div id="modalProductDescription" class="modal-description">
+                                    <!-- Product description paragraphs generated dynamically -->
+                                </div>
+                                <div class="modal-category-bottom">
+                                    <strong>Category:</strong>
+                                    <span id="modalProductCategoryBottom">Women</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- FOOTER NAVBAR -->
+    <div id="footer-nav"></div>
+
+    <!-- JavaScript Files -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="product.js"></script>
+    <script src="header.js"></script>
+    <script src="footer.js"></script>
+    <script src="women.js"></script>
+
+</body>
+
+</html>

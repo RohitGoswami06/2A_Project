@@ -1,0 +1,211 @@
+/* ==========================================================================
+   Eyewear Store - Order Complete Page Styles (Exact Reference Match)
+   ========================================================================== */
+
+body {
+    font-family: 'DM Sans', sans-serif;
+    color: #111;
+    background-color: #ffffff;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+/* Thin Top Header Logo Area */
+.order-complete-header {
+    background-color: #ffffff;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.logo-img {
+    height: 48px;
+    object-fit: contain;
+}
+
+/* Left Section Styling (50% Width) */
+.order-left-section {
+    background-color: #ffffff;
+}
+
+.order-check-circle {
+    width: 46px;
+    height: 46px;
+    border-radius: 50%;
+    border: 2px solid #000000;
+    color: #000000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    flex-shrink: 0;
+}
+
+.order-num-text {
+    color: #888888;
+    font-size: 14px;
+    margin-bottom: 2px;
+}
+
+.order-thank-you-title {
+    font-size: 22px;
+    font-weight: 700;
+    color: #111111;
+    line-height: 1.2;
+}
+
+/* Order Cards (Updates & Customer Info) */
+.order-card-box {
+    border: 1px solid #e5e5e5;
+    border-radius: 4px;
+    background-color: #ffffff;
+}
+
+.card-box-heading {
+    font-size: 18px;
+    font-weight: 500;
+    color: #111111;
+}
+
+.card-box-subtext {
+    color: #777777;
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+/* Info Row (Contact, Address, Payment) */
+.info-row {
+    padding: 16px 20px;
+    border-bottom: 1px solid #f0f0f0;
+}
+
+.info-row:last-child {
+    border-bottom: none;
+}
+
+.info-title {
+    color: #555555;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.info-content {
+    color: #555555;
+    font-size: 14px;
+    line-height: 1.65;
+}
+
+/* Black Continue Shopping Button */
+.btn-continue-shopping {
+    background-color: #000000;
+    color: #ffffff;
+    font-weight: 700;
+    font-size: 13px;
+    letter-spacing: 0.5px;
+    padding: 12px 24px;
+    border-radius: 4px;
+    text-decoration: none;
+    display: inline-block;
+    transition: background-color 0.2s ease;
+    border: none;
+}
+
+.btn-continue-shopping:hover {
+    background-color: #333333;
+    color: #ffffff;
+}
+
+/* Right Section Styling (50% Width, Light Grey Background) */
+.order-right-section {
+    background-color: #eeeeee;
+    min-height: 100%;
+}
+
+.your-order-heading {
+    font-size: 20px;
+    font-weight: 500;
+    color: #111111;
+}
+
+.product-thumb-box {
+    position: relative;
+    width: 64px;
+    height: 64px;
+    border: 1px solid #e0e0e0;
+    border-radius: 6px;
+    background-color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.product-thumb-box img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+.qty-badge-top-right {
+    position: absolute;
+    top: -8px;
+    right: -8px;
+    width: 22px;
+    height: 22px;
+    border-radius: 50%;
+    background-color: #000000;
+    color: #ffffff;
+    font-size: 11px;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+}
+
+.product-name-text {
+    font-size: 14px;
+    font-weight: 600;
+    color: #333333;
+}
+
+.product-price-text {
+    font-size: 14px;
+    font-weight: 700;
+    color: #111111;
+}
+
+.summary-subtotal-row {
+    font-size: 14px;
+}
+
+.summary-total-row {
+    border-top: 1px solid #e0e0e0 !important;
+}
+
+.total-label {
+    font-size: 22px;
+    font-weight: 700;
+    color: #111111;
+}
+
+.usd-tag {
+    font-size: 10px;
+    color: #777777;
+    background-color: #e0e0e0;
+    padding: 2px 6px;
+    border-radius: 2px;
+    font-family: monospace;
+}
+
+.total-amount {
+    font-size: 24px;
+    font-weight: 700;
+    color: #111111;
+}
+
+@media (max-width: 991.98px) {
+    .order-right-section {
+        min-height: auto;
+    }
+}
